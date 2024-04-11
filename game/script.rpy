@@ -24,9 +24,7 @@ label start:
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    e "As the sun dipped below the horizon, casting long shadows over the eerie town of Whispering Hollow, a chill crept down Player’s spine. They stood before what would be their new home, 657 Boulevard. "
 
     # This ends the game.
 
