@@ -228,11 +228,11 @@ label end_1:
 
 label team_joe:
     """
-    player_name appreciates Olivia’s note but does not pay much heed to it. player_name recognizes that Joe is not your average neighbor. They soon realize that there are things that are strange about Joe but they still continue to trust him. They know he can use a helping hand while settling into their new life and having Joe right across the street is extremely convenient. player_name decides to spend more time with Joe and continues to let him into his house to get it set up. 
+    player_name appreciates Olivia's note but does not pay much heed to it. player_name recognizes that Joe is not your average neighbor. They soon realize that there are things that are strange about Joe but they still continue to trust him. They know he can use a helping hand while settling into their new life and having Joe right across the street is extremely convenient. player_name decides to spend more time with Joe and continues to let him into his house to get it set up. 
 
-    player_name decided to keep the yellow eyed cat that appeared in the house when they moved in and named it Pepper, but they haven’t shown Joe yet, since the cat hides anytime guests are over. 
+    player_name decided to keep the yellow eyed cat that appeared in the house when they moved in and named it Pepper, but they haven't shown Joe yet, since the cat hides anytime guests are over. 
 
-    player_name heard a rumor around the town that Joe killed Olivia’s cat, but that couldn’t be true, could it? Joe’s mannerisms might be strange but he wouldn’t kill a cat!
+    player_name heard a rumor around the town that Joe killed Olivia's cat, but that couldn't be true, could it? Joe's mannerisms might be strange but he wouldn't kill a cat!
 
     The yellow eyed cat suddenly appears in the room while Joe is over. He leans down and picks up the cat, with a too-wide smile on his face.
     """
@@ -275,10 +275,13 @@ label nice_to_joe:
         "How do you feel now that you know the truth?"
 
         "player_name believes Joe":
+            jump believes_joe
 
         "player_name doesn't know who to believe":
+            jump doesnt_know
 
         "player_name thinks Joe is lying":
+            jump joe_lying
 
 label mean_to_joe:
     p "{b}{size=+25}Pepper!!{/size}{/b}"
@@ -294,7 +297,7 @@ label mean_to_joe:
         "Do you feel bad for Joe?"  
 
         "player_name doesn't feel bad for Joe":
-            jump to doesnt_feel_bad_joe
+            jump doesnt_feel_bad_joe
         
         "player_name feels bad for Joe":
             jump feels_bad_joe
@@ -303,7 +306,93 @@ label doesnt_feel_bad_joe:
 
 
 label feels_bad_joe:
+    """
+    A few weeks go by, and player_name feels like maybe they overreacted about Joe and their cat. Maybe player_name should go apologize and hear his side of the story with Olivia. 
 
+    player_name walks down the street to his yard, he only lives a few houses down. Maybe they could become friends and start hanging out, they are neighbors. player_name puts their hands in their pockets sheepishly and follows the path to his front door. 
+
+    player_name feels their hands start to get clammy as they press the doorbell. They hear someone on the other side of the door.
+    """
+
+    j "Hey neighbor."
+
+    """
+    Joe opens the door and stares at player_name, unblinking.
+    """
+
+    p "I just wanted to apologize for my overreaction the other day. I shouldn't have listened to rumors about you. It's so high school and immature. I should've talked to you and heard you out before making judgements about your character. I'm sorry Joe."
+
+    j "Get off my lawn."
+
+    """
+    Joe stares at player_name for a few beats too long before erupting into laughter.
+    """
+
+    j "I'm totally kidding. Oh! But you should've seen your face!"
+
+    """
+    player_name laughs nervously, after having an adrenaline rush from Joe's wicked humor.
+    """
+
+    j "A Neighbor dropped off some cookies and I just sat down to have some if you would like a bite? I can tell you what actually happened with me and Olivia."
+
+    p "Yeah...That would be great. Thanks, man."
+
+    """
+    They sit down at Joe's kitchen table where there are some beautiful sugar cookies on a white and red plate and a teapot. Joe pours them each a cup and they grab some cookies.
+    """
+
+    p "Wow, these are SO good."
+
+    j "I'm pretty sure it's from Sharon down the road, this is what she always brings to potlucks."
+
+    p "So what's the deal with you and Olivia?"
+
+    """
+    Joe takes a deep sigh.
+    """
+
+    j "She's had it out for me ever since I moved in. It only got worse after her divorce. She killed my cat. Then, because all she cares about is her reputation, she flipped the story and turned the neighborhood against me. I lost all my friends, my dignity, and my cat."
+
+    p "I am so sorry Joe, I'm sorry I ever doubted you."
+
+    """
+    The two chat for a while and snack on the cookies, when player_name notices that the red and white plate is actually a white plate with red writing on it.
+    """
+
+    p "Hey Joe,"
+
+    """
+    player_name moves some of the remaining cookies out of the way.
+    """
+
+    p "What does this say?"
+
+    """
+    Joe slumps over in his chair, falling on the tile floor with a slap.
+    
+    player_name looks at the plate.
+    """
+
+    p "Love, Olivia?!"
+
+    """
+    player_name dies from poison.
+    """
+
+    """
+    {b}{size=+25}END - OLIVA KILLS PLAYER{/size}{/b}
+    """
+
+    return
+
+label believes_joe:
+
+
+label doesnt_know:
+
+
+label joe_lying:
 
 
 label team_olivia:
