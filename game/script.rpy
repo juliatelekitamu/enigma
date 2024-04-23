@@ -314,6 +314,7 @@ label doesnt_feel_bad_joe:
 
 
 label feels_bad_joe:
+    scene bg house_joe
     """
     A few weeks go by, and player_name feels like maybe they overreacted about Joe and their cat. Maybe player_name should go apologize and hear his side of the story with Olivia. 
 
@@ -321,6 +322,7 @@ label feels_bad_joe:
 
     player_name feels their hands start to get clammy as they press the doorbell. They hear someone on the other side of the door.
     """
+    
 
     j "Hey neighbor."
 
@@ -341,10 +343,12 @@ label feels_bad_joe:
     """
     player_name laughs nervously, after having an adrenaline rush from Joe's wicked humor.
     """
+    scene bg cookies
 
     j "A Neighbor dropped off some cookies and I just sat down to have some if you would like a bite? I can tell you what actually happened with me and Olivia."
 
     p "Yeah...That would be great. Thanks, man."
+    
 
     """
     They sit down at Joe's kitchen table where there are some beautiful sugar cookies on a white and red plate and a teapot. Joe pours them each a cup and they grab some cookies.
