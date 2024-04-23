@@ -19,7 +19,10 @@ define u = Character("Unknown")
 define e = Character("Eileen")
 
 
-image ben friend_carrying_boxes = "images/characters/ben-carrying-boxes.png"
+image ben carrying_boxes = "images/characters/ben/ben-carrying-boxes.png"
+image ben mouth_closed = "images/characters/ben/ben-mouth-closed.png"
+image ben talking_mouth_open = "images/characters/ben/ben-talking-mouth-open.png"
+image ben talking_mouth_open_2 = "images/characters/ben/ben-talking-mouth-open-2.png"
 
 image olivia smiling_talking = "images/characters/olivia/olivia-smiling-talking.png"
 image olivia about_to_cry = "images/characters/olivia/olivia-about-to-cry.png"
@@ -64,7 +67,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show joe smile
+    show ben talking_mouth_open
     # These display lines of dialogue.
 
     """
