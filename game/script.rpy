@@ -6,17 +6,49 @@
 define p = Character("Player")
 # define p = Character("player_name", dynamic=True;)
 
-define b = Character("Ben")
+define b = Character("Ben", image = "ben")
 
-define j = Character("Joe")
+define j = Character("Joe", image = "joe")
 
-define o = Character("Olivia")
+define o = Character("Olivia", image = "olivia")
 
 define s = Character("Setting")
 
 define u = Character("Unknown")
 
-define e = Character("Eileen", image="eileen")
+define e = Character("Eileen")
+
+
+image ben friend_carrying_boxes = "images/characters/ben-carrying-boxes.png"
+
+image olivia smiling_talking = "images/characters/olivia/olivia-smiling-talking.png"
+image olivia about_to_cry = "images/characters/olivia/olivia-about-to-cry.png"
+image olivia concerned_1 = "images/characters/olivia/olivia-concerned-1.png"
+image olivia concerned_2 = "images/characters/olivia/olivia-concerned-2.png"
+image olivia concerned_3 = "images/characters/olivia/olivia-concerned-3.png"
+image olivia crying = "images/characters/olivia/olivia-crying.png"
+image olivia evil_smile_1 = "images/characters/olivia/olivia-evil-smile-1.png"
+image olivia evil_smile_2 = "images/characters/olivia/olivia-evil-smile-2.png"
+image olivia evil_smile_3 = "images/characters/olivia/olivia-evil-smile-3.png"
+image olivia frown = "images/characters/olivia/olivia-frown.png"
+image olivia frown_hands_together = "images/characters/olivia/olivia-frown-hands-together.png"
+image olivia frustrated = "images/characters/olivia/olivia-frustrated.png"
+image olivia losing_her_mind = "images/characters/olivia/olivia-losing-her-mind.png"
+image olivia screaming = "images/characters/olivia/olivia-screaming.png"
+image olivia slightly_concerned_talking = "images/characters/olivia/olivia-slightly-concerned-talking.png"
+image olivia smile_mouth_closed = "images/characters/olivia/olivia-smile-mouth-closed.png"
+image olivia smile_mouth_open = "images/characters/olivia/olivia-smile-mouth-open.png"
+image olivia surprised = "images/characters/olivia/olivia-surprised.png"
+image olivia surprised_concerned = "images/characters/olivia/olivia-surprised-concerned.png"
+
+
+image joe frown_1 = "images/characters/joe/joe-frown-1.png"
+image joe smile = "images/characters/joe/joe-smile.png"
+image joe talking = "images/characters/joe/joe-talking.png"
+image joe talking_smiling = "images/characters/joe/joe-talking-smiling.png"
+
+
+
 
 # The game starts here.
 
@@ -32,8 +64,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show e
-
+    show joe smile
     # These display lines of dialogue.
 
     """

@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 68: expected statement.
+    shoe olivia smiling_talking
+                               ^
+
+Ren'Py Version: Ren'Py 8.2.1.24030407
+Tue Apr 23 18:19:09 2024
