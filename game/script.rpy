@@ -271,7 +271,14 @@ label nice_to_joe:
 
     p "Wow. I am SO sorry Joe." 
 
-    return
+    menu:
+        "How do you feel now that you know the truth?"
+
+        "player_name believes Joe":
+
+        "player_name doesn't know who to believe":
+
+        "player_name thinks Joe is lying":
 
 label mean_to_joe:
     p "{b}{size=+25}Pepper!!{/size}{/b}"
@@ -283,7 +290,22 @@ label mean_to_joe:
     """
     The player_name was hesitant to have their cat around Joe but didn't want to be rude or mean about it. player_name lifts Pepper from Joe's lap and takes him to the room, aggressively shutting the door behind him.
     """
-    return 
+    menu:
+        "Do you feel bad for Joe?"  
+
+        "player_name doesn't feel bad for Joe":
+            jump to doesnt_feel_bad_joe
+        
+        "player_name feels bad for Joe":
+            jump feels_bad_joe
+
+label doesnt_feel_bad_joe:
+
+
+label feels_bad_joe:
+
+
+
 label team_olivia:
  
 # This ends the game.
