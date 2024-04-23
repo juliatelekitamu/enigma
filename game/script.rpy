@@ -183,7 +183,10 @@ label ben_falls:
 
     """
     Joe exclaims, his voice tinged with concern.
+
     """
+
+    scene bg stairs
 
     """
     Heart pounding, player_name and Joe rush inside the house, their minds racing with thoughts of what could have caused the disturbance. They find the boxes scattered at the bottom of the stairs, and to their horror, Ben lying unconscious beside them.
@@ -220,6 +223,8 @@ label end_1:
     But before the paramedics can reach them, player_name succumbs to their injuries, leaving Ben and Joe to grapple with the devastating loss of their friend. The haunted house on 657 Boulevard claims yet another victim, its malevolent presence leaving a trail of despair in its wake.
     """
 
+    scene bg death
+
     """
     {b}{size=+25}player_name has died{/size}{/b}
     """
@@ -237,6 +242,8 @@ label team_joe:
     The yellow eyed cat suddenly appears in the room while Joe is over. He leans down and picks up the cat, with a too-wide smile on his face.
     """
 
+    scene bg room_cat
+
     menu:
         "Do you believe the rumors about Joe?"
         
@@ -247,6 +254,7 @@ label team_joe:
             jump mean_to_joe
 
 label nice_to_joe:
+    scene bg gamestable
     """
     player_name and Joe chat for a few hours over a board game and some coffee. Joe suddenly stands up.
     """
@@ -379,7 +387,7 @@ label feels_bad_joe:
     """
     player_name dies from poison.
     """
-
+    scene bg death
     """
     {b}{size=+25}END - OLIVA KILLS PLAYER{/size}{/b}
     """
