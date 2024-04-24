@@ -136,7 +136,7 @@ label start:
     Before player_name can probe further, a chilling figure emerges from the shadows.
     """
 
-    u "So you're moving into 657 Boulevard?"
+    j "So you're moving into 657 Boulevard?"
 
     b "AH!"
 
@@ -250,7 +250,7 @@ label end_1:
     """
     player_name reassures Ben, determined to handle the task alone.
     """
-
+    scene bg stairs
     """
     As player_name starts to ascend the stairs, the weight of the boxes pressing down on them with each step, a sudden loud crash echoes through the house. BANG!  Ben and Joe freeze in terror, their hearts pounding as they rush to investigate.
     Their worst fears are realized when they find player_name lying at the foot of the stairs, blood pooling beneath their head from a severe injury. Panic sets in as Ben quickly dials 911, his hands shaking as he tries to keep player_name awake, desperately praying for help to arrive in time.
@@ -332,6 +332,8 @@ label mean_to_joe:
     player_name screams at his cat to get away from Joe. 
     """
 
+    scene bg closed_door
+
     """
     The player_name was hesitant to have their cat around Joe but didn't want to be rude or mean about it. player_name lifts Pepper from Joe's lap and takes him to the room, aggressively shutting the door behind him.
     """
@@ -402,9 +404,13 @@ label feels_bad_joe:
 
     p "I am so sorry Joe, I'm sorry I ever doubted you."
 
+    
+
     """
     The two chat for a while and snack on the cookies, when player_name notices that the red and white plate is actually a white plate with red writing on it.
     """
+
+    scene bg cookies_close
 
     p "Hey Joe,"
 
@@ -420,12 +426,16 @@ label feels_bad_joe:
     player_name looks at the plate.
     """
 
+    scene bg cookies_olivia
+
     p "Love, Olivia?!"
+
+    scene bg death
 
     """
     player_name dies from poison.
     """
-    scene bg death
+    
     """
     {b}{size=+25}END - OLIVA KILLS PLAYER{/size}{/b}
     """
