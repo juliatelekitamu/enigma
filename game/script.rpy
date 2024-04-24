@@ -75,19 +75,19 @@ label start:
     show ben talking_mouth_open
     # These display lines of dialogue.
 
-    """
-    As the sun dipped below the horizon, casting long shadows over the eerie town of Whispering Hollow, a chill crept down [povname]'s back. They stood before what would be their new home, 657 Boulevard.
+    blank "As the sun dipped below the horizon, casting long shadows over the eerie town of Whispering Hollow, a chill crept down [povname]'s back." 
+    
+    blank "They stood before what would be their new home, 657 Boulevard."
 
-    A new job awaits in this small forsaken town, and the only available residence was this haunted house. Clutching their keys tightly, [povname] couldn't shake the feeling of unease that settled on their shoulders.
+    blank "A new job awaits in this small forsaken town, and the only available residence was this haunted house."
+    
+    blank "Clutching their keys tightly, [povname] couldn't shake the feeling of unease that settled on their shoulders."
 
-    As Ben and [povname] continued moving boxes into the house, Ben struck up a conversation to lighten the mood.
-    """
+    blank "As Ben and [povname] continued moving boxes into the house, Ben struck up a conversation to lighten the mood."
     
     b "So are you excited for your new place and new job? This house looks awesome!"
 
-    """ 
-    [povname] frowned slightly, not seeing what was so awesome about it.
-    """
+    blank "[povname] frowned slightly, not seeing what was so awesome about it."
     
     povname "The house is huge, and it was the only one that was available immediately, that's why I decided to buy it."
 
@@ -98,95 +98,73 @@ label start:
 
     o "Are you new in the neighborhood?"
 
-    """
-    [povname] turns to find a woman approaching with a friendly smile, her presence a welcome contrast to the foreboding atmosphere surrounding 657 Boulevard.
-    Ben shoots [povname] an unsure look.
-    """
+    blank "[povname] turns to find a woman approaching with a friendly smile, her presence a welcome contrast to the foreboding atmosphere surrounding 657 Boulevard."
+
+    blank "Ben shoots [povname] an unsure look."
 
     povname "Yeah! Just moved in."
 
     o "You must be [povname]! I'm Olivia! It's so nice to finally meet you in person!" 
 
-    """
-    Olivia smiles, her warm demeanor putting [povname] at ease. She presents a welcoming basket, and [povname] accepts it gratefully.
-    """
+    blank "Olivia smiles, her warm demeanor putting [povname] at ease. She presents a welcoming basket, and [povname] accepts it gratefully."
 
     povname "Thank you! That's so sweet of you! It's so nice to finally talk in person!"
 
     o "If you ever need anything, don't hesitate to ask. This neighborhood can be a bit...unique, but we all look out for each other."
 
-    """
-    [povname] feels a wave of gratitude wash over them at Olivia's offer of support. 
-    """
+    blank "[povname] feels a wave of gratitude wash over them at Olivia's offer of support." 
 
     povname "Thank you, Olivia. That means a lot. And it's good to know there are friendly faces nearby. I'll definitely keep that in mind."
 
-    """
-    As Olivia bids them farewell and continues on her way, [povname] can't help but feel a glimmer of hope. Perhaps, with the kindness of their new neighbor Olivia, they can find a sense of belonging in this strange and mysterious town after all.
-    """
+    blank "As Olivia bids them farewell and continues on her way, [povname] can't help but feel a glimmer of hope."
+    
+    blank "Perhaps, with the kindness of their new neighbor Olivia, they can find a sense of belonging in this strange and mysterious town after all."
  
     b "Who was that?"
 
-    """
-    Ben's voice breaks the silence, pulling [povname] back to the present.
-    [povname] laughed at Ben's worried expression.
-    """
+    blank "Ben's voice breaks the silence, pulling [povname] back to the present."
+
+    blank "[povname] laughed at Ben's worried expression."
 
     povname "That was just Olivia, my coworker. I've been texting her for months! She's really nice. Why are you being so weird about her?"
     
-    """
-    Ben shrugged, avoiding [povname]'s gaze.
-    """
+    blank "Ben shrugged, avoiding [povname]'s gaze."
 
     b "I don't know, just got a weird vibe, I guess. Nevermind."
 
     stop music fadeout 5.0
     play music "./gui/music/awkwardmeeting.mp3" fadein 2.0 loop
-    """
-    Before [povname] can probe further, a chilling figure emerges from the shadows.
-    """
+
+    blank "Before [povname] can probe further, a chilling figure emerges from the shadows."
 
     j "So you're moving into 657 Boulevard?"
 
     b "AH!"
 
-    """
-    Ben cried out, jumping back in surprise.
-    """
+    blank "Ben cried out, jumping back in surprise."
 
     povname "Yeah...Today is moving day."
 
-    """
-    [povname] said sheepishly, trying to mask their initial shock.
-    """
 
-    """
-    The figure introduced himself, offering his hand.
-    """
+    blank "[povname] said sheepishly, trying to mask their initial shock."
+
+    blank "The figure introduced himself, offering his hand."
 
     j "Want an extra hand? I am Joe by the way, I live right across the street."
 
-    """
-    Joe's voice carried an unsettling undertone.
-    """
+    blank "Joe's voice carried an unsettling undertone."
 
     povname "Sure…" 
     
-    """
-    [povname] replied, mustering a smile despite the lingering unease.
-    """
+    blank "[povname] replied, mustering a smile despite the lingering unease."
     
     povname "As much as you're, uh, willing to help. We could use all the assistance we can get. There are still plenty of boxes to carry inside and up the stairs."
 
-    """
-    Ben, eager to divert his attention from the eerie encounter, asked,
-    """
+    blank "Ben, eager to divert his attention from the eerie encounter, asked,"
 
     b "Where should I put these boxes?"
 
-    """
-    His voice betraying a hint of apprehension as he glanced around the dimly lit entryway of the house.
-    """
+    blank "His voice betraying a hint of apprehension as he glanced around the dimly lit entryway of the house."
 
     menu:
         "Who carries the boxes?"
@@ -200,25 +178,23 @@ label start:
 label ben_falls:
     povname "In my bedroom upstairs would be great."
 
-    """
-    [povname] replies, trying to maintain a sense of normalcy despite the ominous atmosphere.
-    Ben nods, hoisting the boxes onto his shoulders and carefully making his way up the creaking stairs. 
-    Each step seemed to groan beneath his weight, adding to the tension in the air.
-    Joe and [povname] begin to unload the moving van, placing the boxes on the driveway.
-    """
+    blank "[povname] replies, trying to maintain a sense of normalcy despite the ominous atmosphere."
+
+    blank "Ben nods, hoisting the boxes onto his shoulders and carefully making his way up the creaking stairs."
+
+    blank "Each step seemed to groan beneath his weight, adding to the tension in the air."
+
+    blank "Joe and [povname] begin to unload the moving van, placing the boxes on the driveway."
 
     j "You seem genuine."
 
-    """
-    Joe says looking deep into [povname]'s eyes.
-    """
+    blank "Joe says looking deep into [povname]'s eyes."
 
     j "I've seen a lot of good people come and go in this house, I hope you stick around."
 
     stop music
-    """
-    Before [povname] can even begin to ponder at what that might mean, a deafening crash reverberates through the house, causing them and Joe to freeze in their tracks.
-    """
+
+    blank "Before [povname] can even begin to ponder at what that might mean, a deafening crash reverberates through the house, causing them and Joe to freeze in their tracks."
 
     """
     {b}{size=+20}BANG!{/size}{/b}
@@ -226,25 +202,33 @@ label ben_falls:
     play music "./gui/music/nightvigil.mp3" loop
     j "What on earth was that?!"
 
-    """
-    Joe exclaims, his voice tinged with concern.
-
-    """
+    blank "Joe exclaims, his voice tinged with concern."
     
     scene bg stairs
 
-    """
-    Heart pounding, [povname] and Joe rush inside the house, their minds racing with thoughts of what could have caused the disturbance. They find the boxes scattered at the bottom of the stairs, and to their horror, Ben lying unconscious beside them.
-    Frantic, [povname] and Joe quickly assess the situation, their hands trembling as they check for signs of life. With adrenaline coursing through their veins, they realize the severity of the situation and waste no time in getting Ben to the hospital.
-    Hours pass in agonizing uncertainty as [povname] paces the sterile halls of the hospital, their mind consumed with worry for their friend. Finally, the doctors emerge with grave expressions, delivering the devastating news—Ben is in a coma, his injuries severe and his prognosis uncertain.
-    """
+    blank "Heart pounding, [povname] and Joe rush inside the house, their minds racing with thoughts of what could have caused the disturbance."
+    
+    blank "They find the boxes scattered at the bottom of the stairs, and to their horror, Ben lying unconscious beside them."
 
-    """
-    As [povname] returns to their house with the knowledge of their friend stuck in a coma, the air was filled with a suffocating sense of foreboding. The [povname] ventured deeper into the corridors, ready to retire for the night.
-    With a nervous hand, [povname] flicked on a light, revealing their bedroom shrouded in shadows. And there, nestled in the corner, a pair of glowing eyes stared back at them—a solitary cat, its fur bristling with unease, as they too were sensing that there was something more to the house.
-    As night descended upon Whispering Hollow, [povname] couldn't shake the feeling that their arrival at 657 Boulevard had set into motion a chain of events far beyond their understanding. Little did they know, the secrets of the house—and the town—were waiting to be unearthed, and the darkness that dwelled within would stop at nothing to claim its next victim.
-    [povname] being new to the town, wants to get to know more about it and make some friends. 
-    """
+    blank "Frantic, [povname] and Joe quickly assess the situation, their hands trembling as they check for signs of life. With adrenaline coursing through their veins, they realize the severity of the situation and waste no time in getting Ben to the hospital."
+
+    blank "Hours pass in agonizing uncertainty as [povname] paces the sterile halls of the hospital, their mind consumed with worry for their friend."
+    
+    blank "Finally, the doctors emerge with grave expressions, delivering the devastating news — Ben is in a coma, his injuries severe and his prognosis uncertain."
+
+    blank "As [povname] returns to their house with the knowledge of their friend stuck in a coma, the air was filled with a suffocating sense of foreboding."
+    
+    blank "The [povname] ventured deeper into the corridors, ready to retire for the night."
+
+    blank "With a nervous hand, [povname] flicked on a light, revealing their bedroom shrouded in shadows."
+    
+    blank "And there, nestled in the corner, a pair of glowing eyes stared back at them—a solitary cat, its fur bristling with unease, as they too were sensing that there was something more to the house."
+
+    blank "As night descended upon Whispering Hollow, [povname] couldn't shake the feeling that their arrival at 657 Boulevard had set into motion a chain of events far beyond their understanding."
+    
+    blank "Little did they know, the secrets of the house—and the town—were waiting to be unearthed, and the darkness that dwelled within would stop at nothing to claim its next victim."
+
+    blank "[povname] being new to the town, wants to get to know more about it and make some friends."
 
     menu:
         "Who should [povname] learn more about?"
@@ -256,19 +240,30 @@ label ben_falls:
             jump team_olivia
 
 label end_1:
-    "You can leave them right there, I can move them upstairs to the bedroom."
+    povname "You can leave them right there, I can move them upstairs to the bedroom."
 
-    """
-    [povname] reassures Ben, determined to handle the task alone.
-    """
+    blank "[povname] reassures Ben, determined to handle the task alone."
+
     scene bg stairs
     stop music
     play music "./gui/music/nightvigil.mp3" loop
+
+    blank "As [povname] starts to ascend the stairs, the weight of the boxes pressing down on them with each step, a sudden loud crash echoes through the house."
+    
     """
-    As [povname] starts to ascend the stairs, the weight of the boxes pressing down on them with each step, a sudden loud crash echoes through the house. BANG!  Ben and Joe freeze in terror, their hearts pounding as they rush to investigate.
-    Their worst fears are realized when they find [povname] lying at the foot of the stairs, blood pooling beneath their head from a severe injury. Panic sets in as Ben quickly dials 911, his hands shaking as he tries to keep [povname] awake, desperately praying for help to arrive in time.
-    But before the paramedics can reach them, [povname] succumbs to their injuries, leaving Ben and Joe to grapple with the devastating loss of their friend. The haunted house on 657 Boulevard claims yet another victim, its malevolent presence leaving a trail of despair in its wake.
-    """ 
+    {b}{size=+20}BANG!{/size}{/b}
+    """
+    
+    blank "Ben and Joe freeze in terror, their hearts pounding as they rush to investigate."
+
+    blank "Their worst fears are realized when they find [povname] lying at the foot of the stairs, blood pooling beneath their head from a severe injury."
+    
+    blank "Panic sets in as Ben quickly dials 911, his hands shaking as he tries to keep [povname] awake, desperately praying for help to arrive in time."
+    
+    blank "But before the paramedics can reach them, [povname] succumbs to their injuries, leaving Ben and Joe to grapple with the devastating loss of their friend."
+    
+    blank "The haunted house on 657 Boulevard claims yet another victim, its malevolent presence leaving a trail of despair in its wake."
+
     scene bg death
 
     """
@@ -279,15 +274,18 @@ label end_1:
 
 label team_joe:
     stop music
-    """
-    [povname] appreciates Olivia's note but does not pay much heed to it. [povname] recognizes that Joe is not your average neighbor. They soon realize that there are things that are strange about Joe but they still continue to trust him. They know he can use a helping hand while settling into their new life and having Joe right across the street is extremely convenient. [povname] decides to spend more time with Joe and continues to let him into his house to get it set up. 
 
-    [povname] decided to keep the yellow eyed cat that appeared in the house when they moved in and named it Pepper, but they haven't shown Joe yet, since the cat hides anytime guests are over. 
+    blank "[povname] appreciates Olivia's note but does not pay much heed to it. [povname] recognizes that Joe is not your average neighbor. They soon realize that there are things that are strange about Joe but they still continue to trust him."
+    
+    blank "They know he can use a helping hand while settling into their new life and having Joe right across the street is extremely convenient."
+    
+    blank "[povname] decides to spend more time with Joe and continues to let him into his house to get it set up."
 
-    [povname] heard a rumor around the town that Joe killed Olivia's cat, but that couldn't be true, could it? Joe's mannerisms might be strange but he wouldn't kill a cat!
+    blank "[povname] decided to keep the yellow eyed cat that appeared in the house when they moved in and named it Pepper, but they haven't shown Joe yet, since the cat hides anytime guests are over."
 
-    The yellow eyed cat suddenly appears in the room while Joe is over. He leans down and picks up the cat, with a too-wide smile on his face.
-    """
+    blank "[povname] heard a rumor around the town that Joe killed Olivia's cat, but that couldn't be true, could it? Joe's mannerisms might be strange but he wouldn't kill a cat!"
+
+    blank "The yellow eyed cat suddenly appears in the room while Joe is over. He leans down and picks up the cat, with a too-wide smile on his face."
 
     scene bg room_cat
 
@@ -302,9 +300,8 @@ label team_joe:
 
 label nice_to_joe:
     scene bg gamestable
-    """
-    [povname] and Joe chat for a few hours over a board game and some coffee. Joe suddenly stands up.
-    """
+
+    blank "[povname] and Joe chat for a few hours over a board game and some coffee. Joe suddenly stands up."
 
     j "Thanks for giving me the chance to show you who I really am, most people are scared of me when they hear all the dumb stuff people say about me."
 
@@ -312,9 +309,8 @@ label nice_to_joe:
 
     j "That's not what Olivia tells everybody." 
     
-    """
-    Joe looks at the floor, sadness in his eyes.
-    """
+
+    blank "Joe looks at the floor, sadness in his eyes."
 
     povname "Why does she hate you so much?"
 
@@ -341,15 +337,12 @@ label nice_to_joe:
 label mean_to_joe:
     povname "{b}{size=+25}Pepper!!{/size}{/b}"
     
-    """
-    [povname] screams at his cat to get away from Joe. 
-    """
+    blank "[povname] screams at his cat to get away from Joe."
 
     scene bg closed_door
 
-    """
-    The [povname] was hesitant to have their cat around Joe but didn't want to be rude or mean about it. [povname] lifts Pepper from Joe's lap and takes him to the room, aggressively shutting the door behind him.
-    """
+    blank "The [povname] was hesitant to have their cat around Joe but didn't want to be rude or mean about it. [povname] lifts Pepper from Joe's lap and takes him to the room, aggressively shutting the door behind him."
+
     menu:
         "Do you feel bad for Joe?"  
 
@@ -364,44 +357,37 @@ label doesnt_feel_bad_joe:
 
 label feels_bad_joe:
     scene bg house_joe
-    """
-    A few weeks go by, and [povname] feels like maybe they overreacted about Joe and their cat. Maybe [povname] should go apologize and hear his side of the story with Olivia. 
+    blank "A few weeks go by, and [povname] feels like maybe they overreacted about Joe and their cat. Maybe [povname] should go apologize and hear his side of the story with Olivia."
 
-    [povname] walks down the street to his yard, he only lives a few houses down. Maybe they could become friends and start hanging out, they are neighbors. [povname] puts their hands in their pockets sheepishly and follows the path to his front door. 
-
-    [povname] feels their hands start to get clammy as they press the doorbell. They hear someone on the other side of the door.
-    """
+    blank "[povname] walks down the street to his yard, he only lives a few houses down. Maybe they could become friends and start hanging out, they are neighbors."
     
+    blank "[povname] puts their hands in their pockets sheepishly and follows the path to his front door."
+
+    blank "[povname] feels their hands start to get clammy as they press the doorbell. They hear someone on the other side of the door."
 
     j "Hey neighbor."
 
-    """
-    Joe opens the door and stares at [povname], unblinking.
-    """
+    blank "Joe opens the door and stares at [povname], unblinking."
 
-    povname "I just wanted to apologize for my overreaction the other day. I shouldn't have listened to rumors about you. It's so high school and immature. I should've talked to you and heard you out before making judgements about your character. I'm sorry Joe."
+    povname "I just wanted to apologize for my overreaction the other day. I shouldn't have listened to rumors about you."
+    
+    povname "It's so high school and immature. I should've talked to you and heard you out before making judgements about your character. I'm sorry Joe."
 
     j "Get off my lawn."
 
-    """
-    Joe stares at [povname] for a few beats too long before erupting into laughter.
-    """
+    blank "Joe stares at [povname] for a few beats too long before erupting into laughter."
 
     j "I'm totally kidding. Oh! But you should've seen your face!"
 
-    """
-    [povname] laughs nervously, after having an adrenaline rush from Joe's wicked humor.
-    """
+    blank "[povname] laughs nervously, after having an adrenaline rush from Joe's wicked humor."
+
     scene bg cookies
 
     j "A Neighbor dropped off some cookies and I just sat down to have some if you would like a bite? I can tell you what actually happened with me and Olivia."
 
     povname "Yeah...That would be great. Thanks, man."
     
-
-    """
-    They sit down at Joe's kitchen table where there are some beautiful sugar cookies on a white and red plate and a teapot. Joe pours them each a cup and they grab some cookies.
-    """
+    blank "They sit down at Joe's kitchen table where there are some beautiful sugar cookies on a white and red plate and a teapot. Joe pours them each a cup and they grab some cookies."
 
     povname "Wow, these are SO good."
 
@@ -409,35 +395,27 @@ label feels_bad_joe:
 
     povname "So what's the deal with you and Olivia?"
 
-    """
-    Joe takes a deep sigh.
-    """
+    blank "Joe takes a deep sigh."
 
-    j "She's had it out for me ever since I moved in. It only got worse after her divorce. She killed my cat. Then, because all she cares about is her reputation, she flipped the story and turned the neighborhood against me. I lost all my friends, my dignity, and my cat."
+    j "She's had it out for me ever since I moved in. It only got worse after her divorce. She killed my cat. Then, because all she cares about is her reputation, she flipped the story and turned the neighborhood against me."
+    
+    j "I lost all my friends, my dignity, and my cat."
 
     povname "I am so sorry Joe, I'm sorry I ever doubted you."
 
-    
-
-    """
-    The two chat for a while and snack on the cookies, when [povname] notices that the red and white plate is actually a white plate with red writing on it.
-    """
+    blank "The two chat for a while and snack on the cookies, when [povname] notices that the red and white plate is actually a white plate with red writing on it."
 
     scene bg cookies_close
 
     povname "Hey Joe,"
 
-    """
-    [povname] moves some of the remaining cookies out of the way.
-    """
+    blank "[povname] moves some of the remaining cookies out of the way."
 
     povname "What does this say?"
 
-    """
-    Joe slumps over in his chair, falling on the tile floor with a slap.
+    blank "Joe slumps over in his chair, falling on the tile floor with a slap."
     
-    [povname] looks at the plate.
-    """
+    blank "[povname] looks at the plate."
 
     scene bg cookies_olivia
 
@@ -445,9 +423,7 @@ label feels_bad_joe:
 
     scene bg death
 
-    """
-    [povname] dies from poison.
-    """
+    blank "[povname] dies from poison."
     
     """
     {b}{size=+25}END - OLIVA KILLS PLAYER{/size}{/b}
@@ -730,7 +706,7 @@ label not_solved_puzzle:
     blank "They look down and see a knife piercing through the skin."
 
     scene black with dissolve
-    
+
     blank "Falling to the ground, everything fades to black."
 
     blank "OLIVIA BAD END 2"
