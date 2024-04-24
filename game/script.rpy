@@ -19,7 +19,7 @@ define u = Character("Unknown")
 define e = Character("Eileen")
 
 
-image ben carrying_boxes = "images/characters/ben/ben-carrying-boxes.png"
+image ben carrying_boxes = "images/characters/ben/ben-boxes.png"
 image ben mouth_closed = "images/characters/ben/ben-mouth-closed.png"
 image ben talking_mouth_open = "images/characters/ben/ben-talking-mouth-open.png"
 image ben talking_mouth_open_2 = "images/characters/ben/ben-talking-mouth-open-2.png"
@@ -49,6 +49,7 @@ image joe frown_1 = "images/characters/joe/joe-frown-1.png"
 image joe smile = "images/characters/joe/joe-smile.png"
 image joe talking = "images/characters/joe/joe-talking.png"
 image joe talking_smiling = "images/characters/joe/joe-talking-smiling.png"
+image joe startled = "images/characters/joe/joe-startled.png"
 
 
 
@@ -244,6 +245,11 @@ label start:
 label ben_falls:
     p "In my bedroom upstairs would be great."
 
+    transform benwithboxes:
+        xalign 0.4 yalign 0.7
+
+    hide ben with dissolve
+    show ben carrying_boxes at benwithboxes with dissolve
     """
     player_name replies, trying to maintain a sense of normalcy despite the ominous atmosphere.
     Ben nods, hoisting the boxes onto his shoulders and carefully making his way up the creaking stairs. 
@@ -251,13 +257,26 @@ label ben_falls:
     Joe and player_name begin to unload the moving van, placing the boxes on the driveway.
     """
 
+    hide ben with dissolve
+
+    hide joe
+    show joe talking_smiling at midright
+
     j "You seem genuine."
+
+    hide joe
+    show joe smile at midright
 
     """
     Joe says looking deep into player_name's eyes.
     """
+    hide joe
+    show joe talking_smiling at midright
 
     j "I've seen a lot of good people come and go in this house, I hope you stick around."
+
+    hide joe
+    show joe smile at midright
 
     """
     Before player_name can even begin to ponder at what that might mean, a deafening crash reverberates through the house, causing them and Joe to freeze in their tracks.
@@ -266,6 +285,8 @@ label ben_falls:
     """
     {b}{size=+20}BANG!{/size}{/b}
     """
+    hide joe
+    show joe startled at midright
 
     j "What on earth was that?!"
 
@@ -276,11 +297,14 @@ label ben_falls:
 
     scene bg stairs
 
+    show joe startled at midright
+
     """
     Heart pounding, player_name and Joe rush inside the house, their minds racing with thoughts of what could have caused the disturbance. They find the boxes scattered at the bottom of the stairs, and to their horror, Ben lying unconscious beside them.
     Frantic, player_name and Joe quickly assess the situation, their hands trembling as they check for signs of life. With adrenaline coursing through their veins, they realize the severity of the situation and waste no time in getting Ben to the hospital.
     Hours pass in agonizing uncertainty as player_name paces the sterile halls of the hospital, their mind consumed with worry for their friend. Finally, the doctors emerge with grave expressions, delivering the devastating news—Ben is in a coma, his injuries severe and his prognosis uncertain.
     """
+    hide joe with dissolve
 
     """
     As player_name returns to their house with the knowledge of their friend stuck in a coma, the air was filled with a suffocating sense of foreboding. The player_name ventured deeper into the corridors, ready to retire for the night.
@@ -300,11 +324,15 @@ label ben_falls:
 
 label end_1:
     "You can leave them right there, I can move them upstairs to the bedroom."
+    show ben mouth_closed at midleft
+    show joe smile at midright
 
     """
     player_name reassures Ben, determined to handle the task alone.
     """
     scene bg stairs
+    hide ben 
+    hide joe
     """
     As player_name starts to ascend the stairs, the weight of the boxes pressing down on them with each step, a sudden loud crash echoes through the house. BANG!  Ben and Joe freeze in terror, their hearts pounding as they rush to investigate.
     Their worst fears are realized when they find player_name lying at the foot of the stairs, blood pooling beneath their head from a severe injury. Panic sets in as Ben quickly dials 911, his hands shaking as he tries to keep player_name awake, desperately praying for help to arrive in time.
@@ -322,15 +350,22 @@ label end_1:
 label team_joe:
     """
     player_name appreciates Olivia's note but does not pay much heed to it. player_name recognizes that Joe is not your average neighbor. They soon realize that there are things that are strange about Joe but they still continue to trust him. They know he can use a helping hand while settling into their new life and having Joe right across the street is extremely convenient. player_name decides to spend more time with Joe and continues to let him into his house to get it set up. 
+    """
+    scene bg room_cat
 
+    """
     player_name decided to keep the yellow eyed cat that appeared in the house when they moved in and named it Pepper, but they haven't shown Joe yet, since the cat hides anytime guests are over. 
 
     player_name heard a rumor around the town that Joe killed Olivia's cat, but that couldn't be true, could it? Joe's mannerisms might be strange but he wouldn't kill a cat!
+    """
+    transform double_size_midleft: 
+        xalign 0.33 yalign 1.8 zoom 1.5
 
+    show joe smile at double_size_midleft with dissolve
+
+    """
     The yellow eyed cat suddenly appears in the room while Joe is over. He leans down and picks up the cat, with a too-wide smile on his face.
     """
-
-    scene bg room_cat
 
     menu:
         "Do you believe the rumors about Joe?"
@@ -342,14 +377,27 @@ label team_joe:
             jump mean_to_joe
 
 label nice_to_joe:
+
+    transform double_size_midleft1:
+        xalign 0.2 yalign 1.8 zoom 1.5
+
     scene bg gamestable
+    show joe smile at double_size_midleft1
     """
     player_name and Joe chat for a few hours over a board game and some coffee. Joe suddenly stands up.
     """
+    hide joe
+    show joe talking_smiling at double_size_midleft1
 
     j "Thanks for giving me the chance to show you who I really am, most people are scared of me when they hear all the dumb stuff people say about me."
 
+    hide joe
+    show joe smile at double_size_midleft1
+
     p "I'm sorry everyone tells you who to be, man. I know you'd never hurt a fly."
+
+    hide joe 
+    show joe frown_1 at double_size_midleft1
 
     j "That's not what Olivia tells everybody." 
     
@@ -359,9 +407,15 @@ label nice_to_joe:
 
     p "Why does she hate you so much?"
 
+    hide joe
+    show joe talking_smiling at double_size_midleft1
+
     j "Probably because I'm the only person who knows the real Olivia."
 
     p "What do you mean by that?"
+
+    hide joe
+    show joe startled at double_size_midleft1
 
     j "She actually killed MY cat. Olivia has never even HAD a cat! But because I dress a bit alternatively, have a special interst in frogs, and keep to myself, everyone would rather believe Miss Queen Bee Sorority Girly Olivia."
 
@@ -380,8 +434,13 @@ label nice_to_joe:
             jump joe_lying
 
 label mean_to_joe:
+
+    show joe smile at double_size_midleft1
+
     p "{b}{size=+25}Pepper!!{/size}{/b}"
     
+    hide joe 
+    show joe frown_1 at double_size_midleft1
     """
     player_name screams at his cat to get away from Joe. 
     """
@@ -413,14 +472,19 @@ label feels_bad_joe:
     player_name feels their hands start to get clammy as they press the doorbell. They hear someone on the other side of the door.
     """
     
+    p "Hey neighbor."
 
-    j "Hey neighbor."
-
+    show joe talking_smiling at midright with dissolve
     """
     Joe opens the door and stares at player_name, unblinking.
     """
+    hide joe
+    show joe frown_1 at midright
 
     p "I just wanted to apologize for my overreaction the other day. I shouldn't have listened to rumors about you. It's so high school and immature. I should've talked to you and heard you out before making judgements about your character. I'm sorry Joe."
+
+    hide joe
+    show joe startled at midright
 
     j "Get off my lawn."
 

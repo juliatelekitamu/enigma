@@ -1,15 +1,15 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 82, in script
-    show ben talking_mouth_open fade at midleft
-Exception: Image 'ben talking_mouth_open' does not accept attributes 'fade'.
+  File "game/script.rpy", line 477, in script
+    show joe talking smiling at midright with dissolve
+Exception: Image 'joe talking' does not accept attributes 'smiling'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 82, in script
-    show ben talking_mouth_open fade at midleft
+  File "game/script.rpy", line 477, in script
+    show joe talking smiling at midright with dissolve
   File "C:\Users\Rhea2\Desktop\renpy\renpy-8.2.1-sdk\renpy\ast.py", line 1113, in execute
     show_imspec(self.imspec, atl=getattr(self, "atl", None))
   File "C:\Users\Rhea2\Desktop\renpy\renpy-8.2.1-sdk\renpy\ast.py", line 1076, in show_imspec
@@ -22,9 +22,9 @@ Full traceback:
     args.extraneous()
   File "C:\Users\Rhea2\Desktop\renpy\renpy-8.2.1-sdk\renpy\display\displayable.py", line 109, in extraneous
     raise Exception("Image '{}' does not accept attributes '{}'.".format(
-Exception: Image 'ben talking_mouth_open' does not accept attributes 'fade'.
+Exception: Image 'joe talking' does not accept attributes 'smiling'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.1.24030407
 Enigma 1.0
-Wed Apr 24 14:18:58 2024
+Wed Apr 24 16:17:09 2024
