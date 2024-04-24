@@ -63,32 +63,49 @@ label start:
 
     scene bg house
 
+    transform midleft:
+        xalign 0.33 yalign 1.00
+    transform midright:
+        xalign 0.66 yalign 1.05
+
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show ben talking_mouth_open
     # These display lines of dialogue.
 
     """
     As the sun dipped below the horizon, casting long shadows over the eerie town of Whispering Hollow, a chill crept down player_name. They stood before what would be their new home, 657 Boulevard.
 
     A new job awaits in this small forsaken town, and the only available residence was this haunted house. Clutching their keys tightly, player_name couldn't shake the feeling of unease that settled on their shoulders.
-
+    """
+    show ben talking_mouth_open at midleft with dissolve
+    """
     As Ben and player_name continued moving boxes into the house, Ben struck up a conversation to lighten the mood.
     """
-    
+    hide ben
+    show ben mouth_closed at midleft
+
     b "So are you excited for your new place and new job? This house looks awesome!"
+
+    show ben talking_mouth_open at midleft 
 
     """ 
     player_name frowned slightly, not seeing what was so awesome about it.
     """
+    hide ben
+    show ben mouth_closed at midleft
     
     p "The house is huge, and it was the only one that was available immediately, that's why I decided to buy it."
 
     b "It's going to be weird not seeing you around anymore. We have been best friends since we were in elementary school."
 
+    show olivia smiling_talking at midright with dissolve
+
     o "Are you new in the neighborhood?"
+
+    hide olivia
+    show olivia smile_mouth_closed at midright
 
     """
     player_name turns to find a woman approaching with a friendly smile, her presence a welcome contrast to the foreboding atmosphere surrounding 657 Boulevard.
@@ -97,15 +114,26 @@ label start:
 
     p "Yeah! Just moved in."
 
+    show olivia smiling_talking at midright
+
     o "You must be player_name! I'm Olivia! It's so nice to finally meet you in person!" 
+
+    hide olivia
+    show olivia smile_mouth_closed at midright
 
     """
     Olivia smiles, her warm demeanor putting player_name at ease. She presents a welcoming basket, and player_name accepts it gratefully.
     """
+    show olivia smile_mouth_open at midright
 
     p "Thank you! That's so sweet of you! It's so nice to finally talk in person!"
 
+    show olivia smiling_talking at midright
+
     o "If you ever need anything, don't hesitate to ask. This neighborhood can be a bit...unique, but we all look out for each other."
+
+    hide olivia
+    show olivia smile_mouth_closed at midright
 
     """
     player_name feels a wave of gratitude wash over them at Olivia's offer of support. 
@@ -116,6 +144,10 @@ label start:
     """
     As Olivia bids them farewell and continues on her way, player_name can't help but feel a glimmer of hope. Perhaps, with the kindness of their new neighbor Olivia, they can find a sense of belonging in this strange and mysterious town after all.
     """
+    hide olivia with dissolve
+
+    hide ben
+    show ben talking_mouth_open at midleft
 
     b "Who was that?"
 
@@ -124,19 +156,35 @@ label start:
     player_name laughed at Ben's worried expression.
     """
 
+
     p "That was just Olivia, my coworker. I've been texting her for months! She's really nice. Why are you being so weird about her?"
     
+    hide ben 
+    show ben mouth_closed at midleft
+
     """
     Ben shrugged, avoiding player_name's gaze.
     """
 
+    show ben talking_mouth_open_2 at midleft
+
     b "I don't know, just got a weird vibe, I guess. Nevermind."
 
+    hide ben
+    show ben mouth_closed at midleft
+
+    show joe frown_1 at midright with dissolve
     """
     Before player_name can probe further, a chilling figure emerges from the shadows.
     """
 
+    hide joe
+    show joe talking at midright
+
     j "So you're moving into 657 Boulevard?"
+
+    hide ben 
+    show ben talking_mouth_open_2 at midleft
 
     b "AH!"
 
@@ -151,14 +199,18 @@ label start:
     """
 
     """
-    The figure introduced himself, offering his hand.
+    The figure introduced himself.
     """
+    hide joe
+    show joe talking_smiling at midright
 
     j "Want an extra hand? I am Joe by the way, I live right across the street."
 
     """
     Joe's voice carried an unsettling undertone.
     """
+    hide joe
+    show joe smile at midright
 
     p "Sure…" 
     
@@ -171,6 +223,8 @@ label start:
     """
     Ben, eager to divert his attention from the eerie encounter, asked,
     """
+    hide ben 
+    show ben talking_mouth_open at midleft
 
     b "Where should I put these boxes?"
 

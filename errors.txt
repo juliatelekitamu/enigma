@@ -2,9 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 68: expected statement.
-    shoe olivia smiling_talking
-                               ^
+File "game/script.rpy", line 71: transform statement expects a non-empty block.
+    transform show_hide_dissolve:
+                                 ^
+
+File "game/script.rpy", line 72: expected statement.
+    on show:
+       ^
+
+File "game/script.rpy", line 75: expected statement.
+    on hide:
+       ^
+
+File "game/script.rpy", line 90: multiple at clauses are prohibited.
+    show ben talking_mouth_open at midleft at show_hide_dissolve
+                                             ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Tue Apr 23 18:19:09 2024
+Wed Apr 24 14:20:22 2024
