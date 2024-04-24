@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 68: expected statement.
-    shoe olivia smiling_talking
-                               ^
+File "game/script.rpy", line 80: expected simple expression
+    stop music fadeout
+                      ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Tue Apr 23 18:19:09 2024
+Wed Apr 24 13:14:28 2024
