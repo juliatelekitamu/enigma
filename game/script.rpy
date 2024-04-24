@@ -20,6 +20,7 @@ define e = Character("Eileen")
 
 define pov = Character ("[povname]")
 
+define blank = Character ("")
 
 image ben carrying_boxes = "images/characters/ben/ben-carrying-boxes.png"
 image ben mouth_closed = "images/characters/ben/ben-mouth-closed.png"
@@ -464,7 +465,277 @@ label joe_lying:
 
 
 label team_olivia:
- 
-# This ends the game.
+    blank "[povname] decides to befriend Olivia, and begins to hang out with her routinely."
+    
+    blank "They walk together at night around the neighborhood, and for a while, it seems that everything is fine."
 
+    blank "Although there haven’t been any more accidents, [povname] can’t shake the feeling that there is something much older, and darker lurking in the shadows."
+
+    blank "[povname] decides to confide in Olivia of their concerns about the situation."
+
+    menu:
+        "They decides to ask Olivia about:"  
+
+        "Ask Olivia about Joe":
+            jump ask_about_joe
+        
+        "Ask Olivia about the house and town":
+            jump ask_about_house
+
+
+label ask_about_joe:
+    blank "[povname] decides to ask Olivia about Joe, hoping to quell the eerie feeling [povname] gets whenever Joe is around."
+    
+    povname "Olivia, can I ask you about Joe?"
+
+    blank "Olivia turns to [povname] with a slight frown on her face." 
+    
+    o "Joe, what about him?"
+
+    povname "Well, I’ve noticed he seems a bit off. Do you know anything about him?"
+
+    blank "A hint of anger appears in her eyes."
+
+    o "I would be careful around him if I were you."
+
+    blank "It seems that Olivia is not keen on responding to questions about Joe. [povname], however, grows more curious and wants to uncover the truth about Joe."
+
+    blank "[povname] hesitates, but decides to press further."
+
+    povname "I’ve heard some rumors… that he might have caused some trouble?"
+
+    blank "Suddenly, Olivia’s calm demeanor breaks, and with an uncharacteristic burst of emotion, she exclaims."
+
+    o "Trouble? You have no idea! He killed my cat!"
+
+    blank "Following this shocking revelation, [povname] sees Joe in a much darker light."
+    
+    blank "But, alongside this suspicion towards Joe, [povname] can’t help but feel shocked at Olivia’s sudden outburst, and a sense of doubt regarding Olivia’s accusation creeps in."
+
+    menu:
+
+        "Believe Olivia":
+            jump believe_olivia
+        
+        "Doubt Olivia":
+            jump doubt_olivia
+
+
+label ask_about_house:
+    blank "Olivia sighs and settles down on the chair."
+
+    o "The house has a long and unforgiving history."
+
+    blank "This change in her tone unsettles [povname]. [povname] is eager to hear more so Olivia continues."
+
+    o "There have been incidents…"
+    
+    o "A family who lived there before you, their child died. After that, they just disappeared. Some say they were taken by the darkness that resides within those walls. "
+
+    blank "[povname]'s heart sinks and a heavy feeling takes over. The weight of Olivia’s words sink in, sending a shiver down [povname]'s spine."
+
+    menu:
+
+        "Ask Olivia to stay":
+            jump stay_olivia
+        
+        "Say nothing":
+            jump say_nothing
+
+
+label believe_olivia:
+    blank "[povname] believes Olivia and thanks her for sharing the story."
+
+    blank "After their talk, [povname] heads back home to finish setting up their new home."
+
+    blank "[povname] is cleaning their home and notices an antique dresser at the corner of the room."
+
+    blank "Curious, [povname] wants to explore, however, [povname] is also exhausted and has a whole house to clean up like the dusty bookshelf or sorting through the attic."
+
+    menu:
+        "What should the [povname] focus on?"  
+
+        "Attic":
+            jump not_dresser
+        
+        "Dresser":
+            jump dresser
+
+        "Bookshelf":
+            jump not_dresser
+
+
+label doubt_olivia:
+    blank "[povname] decides not to trust Olivia and gets up to confront her."
+
+    blank "[povname] doubts Olivia because of her sudden outburst."
+
+    povname "I’m not sure if I can trust the fact that Joe just killed your cat. He seems like a nice guy, I don’t think he would do something like that."
+
+    blank "Olivia sighs and speaks calmly."
+
+    o "Well, he did. Why wouldn’t you trust me? I wouldn’t make something up for no reason."
+
+    povname "Well, I would like to get to hear both sides of the story and ask Joe…"
+
+    blank "[povname] suddenly feels a sharp pain on their abdomen."
+
+    blank "They look down and see a knife piercing through the skin."
+
+    povname "I knew I shouldn’t have trusted you…"
+
+    scene black with dissolve
+
+    blank "[povname] breathes out before falling to the ground, everything fading to black..."
+
+    blank "OLIVIA BAD END 1"
+
+    return
+
+
+label stay_olivia:
+    blank "[povname] is terrified by the idea of their house being haunted, possibly by ghosts."
+
+    blank "Olivia eagerly offers to let [povname] live in her spare bedroom."
+
+    o "Oh I just realized, my old roommate recently left, and I guess her bedroom is now open. Since we’re good friends, I’ll gladly let you live there for free!"
+
+    povname "Great, thanks so much! I’ll start packing my bags…"
+
+    blank "On a chilly Thursday evening, [povname] is moving her boxes one by one into the house."
+    
+    blank "Olivia then points to an empty room, directing them to check out the space."
+
+    o "Hey the room is right over here, wanna check it out real quick? There’s no bedbugs I promise :)"
+
+    blank "[povname] enters the room, and notices that something is a bit off."
+
+    blank "First, the door seemed awfully thick, and it was a struggle to even open it. The walls were gray and blank, and the window had bars over them."
+
+    blank "Before [povname] even has time to process the situation, the door slams shut behind them and a click of the lock sounds."
+
+    povname "Ha Olivia thats funny, you can let me out now."
+
+    blank "..."
+
+    povname "Hello? Let me out now!"
+
+    blank "A couple hours later, Joe arrives at the window."
+
+    j "Hmm what do we have here?"
+
+    menu:
+
+        "Ask Joe for help":
+            jump joe_help
+        
+        "Tell Joe to go away":
+            jump joe_go_away
+
+
+label say_nothing:
+    blank "[povname] decides to keep living in the house after being told about the house background."
+
+    jump believe_olivia
+
+
+label not_dresser:
+
+    blank "[povname] decides to ignore the dresser and continue cleaning the rest of the house."
+
+    blank "[povname] continues on with life, staying friends with Olivia."
+    
+    blank "Nothing bad happens to the [povname], however spooky things continue to occur in the house."
+
+    blank "OLIVIA FRIEND END"
+
+    return
+
+
+label joe_help:
+    povname "Help me, Joe! Olivia locked me in here, and I’m trapped."
+
+    blank "Joe leaves and comes back with an angle grinder and cuts through the window bars, letting [povname] out."
+
+    j "Stay away from Olivia, and get back home ASAP!"
+
+    blank "[povname] runs home and is frantically packing up all their belongings wanting to get far away from this town."
+    
+    blank "As they are packing, they notice something in the dresser."
+
+    jump dresser
+
+
+label joe_go_away:
+    povname "Go away, creepy man!"
+
+    blank "Joe mutters under his breath that you’re making the wrong choice and shuffles away."
+
+    blank "[povname] continues to pound on the door, screaming at Olivia to let them out. Hours pass, and Olivia finally responds."
+
+    o "Heyyy [povname], I’m so sorry, but I had to do this. The truth is, your house isn’t really haunted."
+
+    o "I used to live there, and had to move out when my boyfriend died of, uh, natural causes…"
+
+    o "Anyway, now that you’re locked in here, I can finally move back in again! Don’t worry, I’m sure you’ll be fine living here, you can get water from the bathroom sink!"
+
+    povname "LET ME OUT! Wait, what am I going to eat?"
+
+    o "I’m sure you’ll be able to, like photosynthesize or something. Bye!"
+
+    blank "After a few weeks pass, player dies of starvation."
+
+    blank "STARVATION END"
+
+    return
+
+
+label dresser: 
+    blank "[povname] finds scraps of torn paper behind the dresser. Curious, [povname] attempts to arrange the pieces together to see what it says."
+
+    povname "Hmm, interesting. It seems like someone wrote something and then tore it all up. I wonder what it says."
+
+    #### PUT MINI GAME HERE ####
+    #### jump to solved_puzzle or not_solved_puzzle ####
+
+
+label solved_puzzle:
+    blank "Once the puzzle is solved, it reveals a confession note written by Olivia, revealing all the crimes she committed, including killing the cat, her boyfriend, and causing the house to seem haunted."
+
+    blank "Player immediately calls 911, alerting the police who then arrest Olivia."
+
+    blank "GOOD END ([povname] wins game)"
+
+    return
+
+label not_solved_puzzle:
+    blank "[povname] does not solve the puzzle in time, and Olivia walks in on the [povname] arranging the puzzle."
+
+    o "Hey! What are you doing?"
+
+    blank "[povname] hesitates for a second to let Olivia know what's going on."
+
+    povname "Oh, I just found these torn pieces of paper, and I was trying to put them back together to see what it says."
+
+    o "I would suggest throwing them away, I’m sure it's nothing important! I’m sure your time is valuable and doubt you should be wasting your efforts on something like this…"
+
+    povname "Its ok, I have nothing better to do"
+
+    o "This is your last warning…"
+
+    povname "Olivia, stop it, you’re acting weird."
+
+    blank "Before [povname] can even think, [povname] suddenly feels a sharp pain on their abdomen."
+
+    blank "They look down and see a knife piercing through the skin."
+
+    scene black with dissolve
+    
+    blank "Falling to the ground, everything fades to black."
+
+    blank "OLIVIA BAD END 2"
+
+    return
+
+# This ends the game.
 return
