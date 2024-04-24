@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -55,6 +55,97 @@ image joe talking_smiling = "images/characters/joe/joe-talking-smiling.png"
 image joe startled = "images/characters/joe/joe-startled.png"
 
 
+default page_pieces = 9 # Amount of pieces for this puzzle.
+default full_page_size = (711, 996)
+default piece_coordinates = [
+    (216 + 300, 137 + 40),
+    (539 + 300, 146 + 40),
+    (155 + 300, 423 + 40),
+    (399 + 300, 419 + 40),
+    (602 + 300, 539 + 40),
+    (121 + 300, 778 + 40),
+    (407 + 300, 686 + 40),
+    (269 + 300, 887 + 40),
+    (548 + 300, 828 + 40)
+]
+
+default initial_piece_coordinates = [] # Will be filled with random initial locations of the pieces.
+default finished_pieces = 0 # Keeps track of the amount of pieces that have been placed correctly.
+
+
+screen reassemble_puzzle:
+    image "images/minigame/background.png"
+    add DynamicDisplayable(countdown, length=120.0)
+    frame:
+        background "images/minigame/puzzle-frame.png"
+        xysize full_page_size
+        anchor(0.5, 0.5)
+        pos(650, 535)
+
+    draggroup:
+        # Group of draggable pieces, and the spots they can be dragged to.
+        # Paper pieces
+        for i in range(page_pieces):
+            drag:
+                drag_name i
+                pos initial_piece_coordinates[i]
+                anchor(0.5, 0.5)
+                focus_mask True
+                drag_raise True
+                image "images/minigame/Pieces/piece-%s.png" % (i + 1)
+
+        # Snappable spots to drag to.
+        for i in range(page_pieces):
+            drag:
+                drag_name i
+                draggable False
+                droppable True
+                dropped piece_drop
+                pos piece_coordinates[i]
+                anchor(0.5, 0.5)
+                focus_mask True
+                image "images/minigame/Pieces/piece-%s.png" % (i + 1) alpha 0.0 # Have the alpha at a higher value when first placing the pieces to make sure it looks correct.
+
+init python:
+    def setup_puzzle():
+        # Setup the puzzle by placing each piece of the puzzle in a random location to the right of the screen.
+        # We do that by setting a start and end coordinate that we can pick random values from.
+        for i in range(page_pieces):
+            start_x = 1200
+            start_y = 200
+            end_x = 1700
+            end_y = 800
+            rand_loc = (renpy.random.randint(start_x, end_x), renpy.random.randint(start_y, end_y))
+            initial_piece_coordinates.append(rand_loc) # Add the random locations to a list so we can use them to place each piece.
+
+    def piece_drop(dropped_on, dragged_piece):
+        # Function that runs when a piece has been dropped.
+        # Below, we check if the dragged piece is dropped on a droppable piece of the same kind and snap it to its location.
+        global finished_pieces
+
+        if dragged_piece[0].drag_name == dropped_on.drag_name:
+            dragged_piece[0].snap(dropped_on.x, dropped_on.y) # Snap the piece to the dropped location.
+            dragged_piece[0].draggable = False # Dropped piece in the correct place should no longer be able to be dragged.
+            finished_pieces += 1
+
+            if finished_pieces == page_pieces:
+                # All pieces have been placed. We continue with the normal flow of the visual novel.
+                renpy.jump("solved_puzzle")
+    
+    def countdown(st, at, length=0.0):
+
+        remaining = length - st
+        minutes = (int) (length - st) / 60
+        seconds = (int) (length - st) % 60
+
+
+        if remaining > 2.0:
+            return Text("%02d:" % minutes + "%02d" % seconds, color="#fff", size=48), .1
+        elif remaining > 0.0:
+            return Text("%02d:" % minutes + "%02d" % seconds, color="#f00", size=48), .1
+        else:
+            renpy.jump("not_solved_puzzle")
+            return anim.Blink(Text("00:00", color="#f00", size=48)), None
 
 
 # The game starts here.
@@ -805,6 +896,8 @@ label dresser:
 
     #### PUT MINI GAME HERE ####
     #### jump to solved_puzzle or not_solved_puzzle ####
+    $setup_puzzle()
+    call screen reassemble_puzzle
 
 
 label solved_puzzle:
