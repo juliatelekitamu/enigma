@@ -14,7 +14,9 @@ define o = Character("Olivia", image = "olivia")
 
 define s = Character("Setting")
 
-define u = Character("Unknown")
+define u = Character("Unknown Man")
+
+define uw = Character("Unknown Woman")
 
 define e = Character("Eileen")
 
@@ -658,6 +660,156 @@ label believes_joe:
 
 
 label doesnt_know:
+    """
+    player_name is shaken up by the events that just took place, they should've just listened to Ben's weird feeling about Joe. Poor Ben, player_name decides to visit him in the hospital that afternoon.
+
+    At 3pm, player_name arrives at the hospital to see Ben, head to toe in bandages. 
+    
+    The sight of him in such a state breaks player_name's heart. player_name leaves flowers next to his bed, replacing the flowers player_name left from 4 days before, that had wilted slightly. 
+    """
+
+    j "Feel better soon Ben. I miss talking to you, I wish I could hear you laugh again. Please get better so I can tell you all the neighborhood gossip haha. Anyways, I have to leave but I'll be back again tomorrow, and the next day, and the next day. Alright, love you man. Bye"
+
+    """
+    player_name drives home in silence, because music just didn't feel right. Not when Ben wasn't in the passenger seat, singing along to whatever song of the month Ben had on repeat.
+    
+    It used to drive player_name crazy sometimes, listening to the same song for 20 minutes, but now all they could think about was how much they would give to do it again.
+
+    player_name hears shouting from outside the car.
+    """
+
+    uw "No YOU get OUT OF MY FACE!"
+
+    """
+    a woman shouts at a man in front of her, his back is turned so player_name can’t make out who the man is, but the black clothes, the way he stands, is that - ?
+    """
+
+    u "THIS IS MY YARD."
+
+    """
+    The man shrieks at the woman. player_name suddenly places him, it’s Joe! What is going on? Wait, is that Olivia?
+
+    player_name pulls their car over next to the curb, and unrolls their passenger window.
+    """
+
+    p "Olivia? Joe? What is going on!?"
+
+    o "I was just out for a walk with my dog and THIS ASSHOLE decided to start yelling at me."
+
+    """
+    Olivia says while shooting a glare at Joe.
+    """
+
+    j "That’s NOT TRUE! God! This is what she always does. She makes herself the victim in EVERY SITUATION."
+
+    p "Guys please calm down. Let’s just all take a breath."
+
+    """
+    player_name tries to calm down the situation before it escalates any further.
+    """
+
+    o "I never wanted any trouble, this dude is just obsessed with ruining my day. Why can’t we just go our separate ways?"
+
+    """
+    Oliva says, tightening the leash on her dog, and pulling him in. She bent down to tie her shoe, stepping on the leash to keep her dog secured.
+    """
+
+    p "That is a wonderful idea, how do you feel about that Joe?"
+
+    """
+    It all happened in a blur, player_name could hardly believe their eyes. Olivia’s dog is suddenly attacking Joe, biting his cheek and hanging off of his mouth. He kicks the dog off of him, holding his hand against his bleeding face. 
+    
+    player_name gets out of the car and Oliva and Joe are in the grass fighting, Olivia’s dog runs up the street, limping back to Olivia's house, with the leash dragging behind him.
+    """
+
+    p "STOP FIGHTING!"
+
+    o "YOU KICKED MY DOG!"
+
+    """
+    Olivia yells, slapping him across the face with her elbow.
+    """
+
+    j "YOU KILLED MY CAT!"
+
+    """
+    Joe screams, grabbing her hair.
+    """
+
+    menu: 
+        "Who will player_name decide to help?"
+
+        "Olivia":
+            jump help_olivia
+
+        "Joe":
+            jump help_joe
+
+label help_olivia:
+    """
+    player_name grabs Olivia by her shoulders and tries to pry her off of Joe. 
+    
+    player_name helps Oliva to her feet and she shrugs their arms off of her. 
+    
+    She stumbles back a few steps, catches her balance and looks at them.
+    """
+
+    o "You’re in my old house, you know."
+
+    p "Joe used to live in your house?"
+
+    o "No, YOU live in my house, you idiot."
+
+    """
+    Olivia says, rolling her eyes. player_name is taken aback by the sudden coldness towards them. Olivia has been nothing but nice before this. 
+    """
+
+    p "Whoa. I’m just trying to help you guys, I’m not trying to start anything, and I didnt know that, when did you live there?"
+
+    """
+    player_name asks genuinely curious but also to keep her and Joe from throwing fists at each other again.
+    """
+
+    j "She lived there before her husband found out what a psycho she is and got the hell out."
+
+    """
+    Joe says, still holding his cheek to stop the blood.
+    """
+
+    o "YOU MONSTER! DON’T YOU EVER BRING HIM UP!"
+
+    """
+    She screams while running towards him, player_name sees a flash of silver reflecting from the street lamps.
+
+    Joe yelps and holds his stomach, blood pouring out.    
+    
+    That’s too much blood. player_name had never seen so much blood. 
+    
+    They begin to feel nauseous.
+    """
+
+    o "No witnesses,"
+
+    """
+    Olivia says and walks slowly towards player_name.
+    """
+
+    o "and suddenly my favorite house in the neighborhood is on the market. Double win."
+
+    """
+    player_name stands in shock, stumbling backwards, with one hand feeling for the hood of their car. 
+    They run around the front and open the car door, but Olivia surprises them on the other side and slams the door shut. 
+    """
+
+    o "When I tied my shoe, I told my dog one of my favorite words! Attack"
+
+    """
+    She stabs player_name and they die.
+    """
+
+    return
+
+label help_joe:
 
 
 label joe_lying:
