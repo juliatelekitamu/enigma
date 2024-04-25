@@ -810,7 +810,50 @@ label help_olivia:
     return
 
 label help_joe:
+    """
+    player_name pushes Joe and Olivia apart, and shouts at them.
+    """
 
+    p "GROW UP!"
+
+    j "Her dog just bit my face off! AND she jumped me."
+
+    o "YOU started this. If you hadn’t said anything to me, we wouldn’t be here right now."
+
+    j "OH PLEASE! We both know that's not true."
+
+    p "Joe let’s take you to the ER, you probably need stitches."
+
+    o "He’s going to need a lot more stitches"
+
+    """
+    Olivia laughs and player_name suddenly realizes she’s pulled a knife.
+    """
+
+    p "Joe. Get in my car. Now."
+
+    """
+    player_name tells Joe without looking at him, then turning to dash to the driver's side door.
+
+    player_name rips open the car door and unlocks the door just long enough for Joe to scramble in the car, bleeding all over the fabric of the seats. 
+    
+    They try to drive away when Olivia jumps in front of the car. player_name sees the knife and Olivia fly off the hood when player_name breaks suddenly. 
+
+    player_name gets out of the car, and Olivia is laying on the pavement, still. 
+    
+    They check for a pulse, and there’s nothing. player_name killed Olivia. 
+
+    For the rest of their life, player_name is haunted by their actions. 
+    
+    They now have manslaughter charges and will be alone with their thoughts for quite a while. 
+    
+    They stare out of their cell window and can’t shake the image of the blood on the pavement where they took a life. 
+    
+    Where they robbed someone of their life. 
+    
+    Their short, bittersweet life on this planet. player_name will never be the same person again, there is only before the accident, and after.
+    """
+    return
 
 label joe_lying:
 
