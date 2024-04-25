@@ -18,6 +18,8 @@ define u = Character("Unknown")
 
 define e = Character("Eileen")
 
+define k = Character("Knife", image = "knife")
+
 define pov = Character ("[povname]")
 
 define blank = Character ("")
@@ -26,6 +28,8 @@ image ben carrying_boxes = "images/characters/ben/ben-boxes.png"
 image ben mouth_closed = "images/characters/ben/ben-mouth-closed.png"
 image ben talking_mouth_open = "images/characters/ben/ben-talking-mouth-open.png"
 image ben talking_mouth_open_2 = "images/characters/ben/ben-talking-mouth-open-2.png"
+
+image knife exists = "images/knife.png"
 
 image olivia smiling_talking = "images/characters/olivia/olivia-smiling-talking.png"
 image olivia about_to_cry = "images/characters/olivia/olivia-about-to-cry.png"
@@ -706,11 +710,16 @@ label team_olivia:
     play music "./gui/music/SCP-x6x.mp3" loop
     blank "[povname] decides to befriend Olivia, and begins to hang out with her routinely."
     
+    show olivia smiling_talking at midleft
+
     blank "They walk together at night around the neighborhood, and for a while, it seems that everything is fine."
 
     blank "Although there haven’t been any more accidents, [povname] can’t shake the feeling that there is something much older, and darker lurking in the shadows."
 
     blank "[povname] decides to confide in Olivia of their concerns about the situation."
+
+    hide olivia
+    show olivia smile_mouth_closed at midleft
 
     menu:
         "They decides to ask Olivia about:"  
@@ -725,18 +734,32 @@ label team_olivia:
 label ask_about_joe:
     blank "[povname] decides to ask Olivia about Joe, hoping to quell the eerie feeling [povname] gets whenever Joe is around."
     
+    show olivia smiling_talking at midleft with dissolve
+
     povname "Olivia, can I ask you about Joe?"
+
+    hide olivia
+    show olivia frown_hands_together at midleft
 
     blank "Olivia turns to [povname] with a slight frown on her face." 
     
+    hide olivia
+    show olivia slightly_concerned_talking at midleft
+
     o "Joe, what about him?"
 
     povname "Well, I’ve noticed he seems a bit off. Do you know anything about him?"
+
+    hide olivia
+    show olivia frown at midleft
 
     stop music
     play music "./gui/music/darkstandoff.mp3" loop
 
     blank "A hint of anger appears in her eyes."
+
+    hide olivia
+    show olivia slightly_concerned_talking at midleft
 
     o "I would be careful around him if I were you."
 
@@ -746,10 +769,16 @@ label ask_about_joe:
 
     povname "I’ve heard some rumors… that he might have caused some trouble?"
 
+    hide olivia
+    show olivia losing_her_mind at midleft
+
     stop music
     play music "./gui/music/darkstandoff.mp3" loop
 
     blank "Suddenly, Olivia’s calm demeanor breaks, and with an uncharacteristic burst of emotion, she exclaims."
+
+    hide olivia
+    show olivia crying at midleft
 
     o "Trouble? You have no idea! He killed my cat!"
 
@@ -757,6 +786,7 @@ label ask_about_joe:
     
     blank "But, alongside this suspicion towards Joe, [povname] can’t help but feel shocked at Olivia’s sudden outburst, and a sense of doubt regarding Olivia’s accusation creeps in."
 
+    hide olivia with dissolve
     menu:
 
         "Believe Olivia":
@@ -767,10 +797,15 @@ label ask_about_joe:
 
 
 label ask_about_house:
+    show olivia smiling_talking at midleft with dissolve
+
     stop music
     play music "./gui/music/distanttension.mp3" loop
 
     blank "Olivia sighs and settles down on the chair."
+
+    hide olivia
+    show olivia frown_hands_together at midleft
 
     o "The house has a long and unforgiving history."
 
@@ -792,11 +827,17 @@ label ask_about_house:
 
 
 label believe_olivia:
+    show olivia about_to_cry at midleft with dissolve
     stop music
     play music "./gui/music/SCP-x5x.mp3" loop
     blank "[povname] believes Olivia and thanks her for sharing the story."
 
+    hide olivia
+    show olivia smile_mouth_closed
+
     blank "After their talk, [povname] heads back home to finish setting up their new home."
+
+    hide olivia with dissolve
 
     blank "[povname] is cleaning their home and notices an antique dresser at the corner of the room."
 
@@ -993,7 +1034,11 @@ label not_solved_puzzle:
     stop music 
     play music "./gui/music/distanttension.mp3" loop
 
+    show olivia concerned_1 at midright with dissolve
     blank "[povname] does not solve the puzzle in time, and Olivia walks in on the [povname] arranging the puzzle."
+    
+    hide olivia
+    show olivia screaming at midright
 
     o "Hey! What are you doing?"
 
@@ -1001,9 +1046,15 @@ label not_solved_puzzle:
 
     povname "Oh, I just found these torn pieces of paper, and I was trying to put them back together to see what it says."
 
+    hide olivia
+    show olivia frown_hands_together at midright
+
     o "I would suggest throwing them away, I’m sure it's nothing important! I’m sure your time is valuable and doubt you should be wasting your efforts on something like this…"
 
     povname "It's ok, I have nothing better to do."
+
+    hide olivia 
+    show olivia evil_smile_3 at midright
 
     o "This is your last warning…"
 
@@ -1011,10 +1062,22 @@ label not_solved_puzzle:
 
     play sound "stabbing_sound.mp3" volume 1.0
 
+    transform olivia_bigger:
+        zoom 2
+
+    transform knife_position:
+        yalign 0.5
+
+    hide olivia 
+    show olivia evil_smile_3 at olivia_bigger
+    show knife exists
+
     blank "Before [povname] can even think, [povname] suddenly feels a sharp pain on their abdomen."
 
-    blank "They look down and see a knife piercing through the skin."
+    scene bg death with dissolve
 
+    blank "They look down and see a knife piercing through the skin."
+    
     scene black with dissolve
 
     blank "Falling to the ground, everything fades to black."
