@@ -1,4 +1,4 @@
-# The script of the game goes in this file.
+﻿# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -173,6 +173,8 @@ label start:
 
     blank "As the sun dipped below the horizon, casting long shadows over the eerie town of Whispering Hollow, a chill crept down [povname]'s back." 
     
+    play sound "wind_sounds.mp3" volume 0.3
+
     blank "They stood before what would be their new home, 657 Boulevard."
 
     blank "A new job awaits in this small forsaken town, and the only available residence was this haunted house."
@@ -180,6 +182,8 @@ label start:
     show ben talking_mouth_open at midleft with dissolve
  
     blank "Clutching their keys tightly, [povname] couldn't shake the feeling of unease that settled on their shoulders."
+
+    stop sound fadeout 2.0
 
     blank "As Ben and [povname] continued moving boxes into the house, Ben struck up a conversation to lighten the mood."
 
@@ -338,7 +342,11 @@ label ben_falls:
     show ben carrying_boxes at benwithboxes with dissolve
     blank "[povname] replies, trying to maintain a sense of normalcy despite the ominous atmosphere."
 
+    play sound "creaky_floorboard.flac" volume 1.0
+
     blank "Ben nods, hoisting the boxes onto his shoulders and carefully making his way up the creaking stairs."
+
+    play sound "creaky_floorboard.flac" volume 1.0
 
     blank "Each step seemed to groan beneath his weight, adding to the tension in the air."
 
@@ -366,11 +374,14 @@ label ben_falls:
 
     stop music
 
+    play sound "falling_stairs.flac" volume 1.0
+
     blank "Before [povname] can even begin to ponder at what that might mean, a deafening crash reverberates through the house, causing them and Joe to freeze in their tracks."
 
     """
     {b}{size=+20}BANG!{/size}{/b}
     """
+
     play music "./gui/music/nightvigil.mp3" loop    
     hide joe
     show joe startled at midright
@@ -389,6 +400,8 @@ label ben_falls:
 
     blank "Frantic, [povname] and Joe quickly assess the situation, their hands trembling as they check for signs of life. With adrenaline coursing through their veins, they realize the severity of the situation and waste no time in getting Ben to the hospital."
 
+    play sound "hospital_beep.mp3" volume 0.5
+
     blank "Hours pass in agonizing uncertainty as [povname] paces the sterile halls of the hospital, their mind consumed with worry for their friend."
     
     blank "Finally, the doctors emerge with grave expressions, delivering the devastating news — Ben is in a coma, his injuries severe and his prognosis uncertain."
@@ -400,6 +413,8 @@ label ben_falls:
     blank "The [povname] ventured deeper into the corridors, ready to retire for the night."
 
     blank "With a nervous hand, [povname] flicked on a light, revealing their bedroom shrouded in shadows."
+
+    play sound "cat_meow.mp3" volume 0.5
     
     blank "And there, nestled in the corner, a pair of glowing eyes stared back at them—a solitary cat, its fur bristling with unease, as they too were sensing that there was something more to the house."
 
@@ -431,8 +446,12 @@ label end_1:
     stop music
     play music "./gui/music/nightvigil.mp3" loop
 
+    play sound "creaky_floorboard.flac" volume 1.0
+
     blank "As [povname] starts to ascend the stairs, the weight of the boxes pressing down on them with each step, a sudden loud crash echoes through the house."
     
+    play sound "falling_stairs.flac" volume 1.0
+
     """
     {b}{size=+20}BANG!{/size}{/b}
     """
@@ -466,6 +485,8 @@ label team_joe:
     blank "[povname] decides to spend more time with Joe and continues to let him into his house to get it set up."
 
     scene bg room_cat
+
+    play sound "cat_meow.mp3" volume 0.5
     stop music
     play music "./gui/music/darkwalk.mp3" loop
 
@@ -811,6 +832,8 @@ label doubt_olivia:
 
     blank "[povname] suddenly feels a sharp pain on their abdomen."
 
+    play sound "stabbing_sound.mp3" volume 1.0
+
     blank "They look down and see a knife piercing through the skin."
 
     povname "I knew I shouldn’t have trusted you…"
@@ -845,6 +868,8 @@ label stay_olivia:
 
     blank "First, the door seemed awfully thick, and it was a struggle to even open it. The walls were gray and blank, and the window had bars over them."
 
+    play sound "lock_door.mp3" volume 1.0
+
     stop music
     play music "./gui/music/ghoststory.mp3" loop
 
@@ -853,6 +878,8 @@ label stay_olivia:
     povname "Ha Olivia thats funny, you can let me out now."
 
     blank "..."
+
+    play sound "bang_door.mp3" volume 1.0
 
     povname "Hello? Let me out now!"
 
@@ -891,6 +918,8 @@ label not_dresser:
 label joe_help:
     povname "Help me, Joe! Olivia locked me in here, and I’m trapped."
 
+    play sound "power_tool.mp3" volume 1.0
+
     blank "Joe leaves and comes back with an angle grinder and cuts through the window bars, letting [povname] out."
 
     stop music
@@ -909,6 +938,8 @@ label joe_go_away:
     povname "Go away, creepy man!"
 
     blank "Joe mutters under his breath that you’re making the wrong choice and shuffles away."
+
+    play sound "bang_door.mp3" volume 1.0
 
     blank "[povname] continues to pound on the door, screaming at Olivia to let them out. Hours pass, and Olivia finally responds."
 
@@ -950,6 +981,8 @@ label solved_puzzle:
     play music "./gui/music/nightvigil.mp3" loop
     blank "Once the puzzle is solved, it reveals a confession note written by Olivia, revealing all the crimes she committed, including killing the cat, her boyfriend, and causing the house to seem haunted."
 
+    play sound "phone_ring.mp3" volume 1.0
+
     blank "Player immediately calls 911, alerting the police who then arrest Olivia."
 
     blank "GOOD END ([povname] wins game)"
@@ -975,6 +1008,8 @@ label not_solved_puzzle:
     o "This is your last warning…"
 
     povname "Olivia, stop it, you’re acting weird."
+
+    play sound "stabbing_sound.mp3" volume 1.0
 
     blank "Before [povname] can even think, [povname] suddenly feels a sharp pain on their abdomen."
 
