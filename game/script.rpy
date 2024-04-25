@@ -342,7 +342,11 @@ label ben_falls:
     show ben carrying_boxes at benwithboxes with dissolve
     blank "[povname] replies, trying to maintain a sense of normalcy despite the ominous atmosphere."
 
+    play sound "creaky_floorboard.flac" volume 1.0
+
     blank "Ben nods, hoisting the boxes onto his shoulders and carefully making his way up the creaking stairs."
+
+    play sound "creaky_floorboard.flac" volume 1.0
 
     blank "Each step seemed to groan beneath his weight, adding to the tension in the air."
 
@@ -396,6 +400,8 @@ label ben_falls:
 
     blank "Frantic, [povname] and Joe quickly assess the situation, their hands trembling as they check for signs of life. With adrenaline coursing through their veins, they realize the severity of the situation and waste no time in getting Ben to the hospital."
 
+    play sound "hospital_beep.mp3" volume 0.5
+
     blank "Hours pass in agonizing uncertainty as [povname] paces the sterile halls of the hospital, their mind consumed with worry for their friend."
     
     blank "Finally, the doctors emerge with grave expressions, delivering the devastating news — Ben is in a coma, his injuries severe and his prognosis uncertain."
@@ -407,6 +413,8 @@ label ben_falls:
     blank "The [povname] ventured deeper into the corridors, ready to retire for the night."
 
     blank "With a nervous hand, [povname] flicked on a light, revealing their bedroom shrouded in shadows."
+
+    play sound "cat_meow.mp3" volume 0.5
     
     blank "And there, nestled in the corner, a pair of glowing eyes stared back at them—a solitary cat, its fur bristling with unease, as they too were sensing that there was something more to the house."
 
@@ -437,6 +445,8 @@ label end_1:
     hide joe
     stop music
     play music "./gui/music/nightvigil.mp3" loop
+
+    play sound "creaky_floorboard.flac" volume 1.0
 
     blank "As [povname] starts to ascend the stairs, the weight of the boxes pressing down on them with each step, a sudden loud crash echoes through the house."
     
