@@ -475,6 +475,8 @@ label team_joe:
 
     scene bg room_cat
 
+    play sound "cat_meow.mp3" volume 0.5
+
     blank "[povname] decided to keep the yellow eyed cat that appeared in the house when they moved in and named it Pepper, but they haven't shown Joe yet, since the cat hides anytime guests are over."
 
     blank "[povname] heard a rumor around the town that Joe killed Olivia's cat, but that couldn't be true, could it? Joe's mannerisms might be strange but he wouldn't kill a cat!"
