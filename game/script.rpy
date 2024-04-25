@@ -1,4 +1,4 @@
-# The script of the game goes in this file.
+﻿# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -173,6 +173,8 @@ label start:
 
     blank "As the sun dipped below the horizon, casting long shadows over the eerie town of Whispering Hollow, a chill crept down [povname]'s back." 
     
+    play sound "wind_sounds.mp3" volume 0.3
+
     blank "They stood before what would be their new home, 657 Boulevard."
 
     blank "A new job awaits in this small forsaken town, and the only available residence was this haunted house."
@@ -180,6 +182,8 @@ label start:
     show ben talking_mouth_open at midleft with dissolve
  
     blank "Clutching their keys tightly, [povname] couldn't shake the feeling of unease that settled on their shoulders."
+
+    stop sound fadeout 2.0
 
     blank "As Ben and [povname] continued moving boxes into the house, Ben struck up a conversation to lighten the mood."
 
