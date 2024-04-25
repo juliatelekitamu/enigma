@@ -370,11 +370,14 @@ label ben_falls:
 
     stop music
 
+    play sound "falling_stairs.flac" volume 1.0
+
     blank "Before [povname] can even begin to ponder at what that might mean, a deafening crash reverberates through the house, causing them and Joe to freeze in their tracks."
 
     """
     {b}{size=+20}BANG!{/size}{/b}
     """
+
     play music "./gui/music/nightvigil.mp3" loop    
     hide joe
     show joe startled at midright
@@ -437,6 +440,8 @@ label end_1:
 
     blank "As [povname] starts to ascend the stairs, the weight of the boxes pressing down on them with each step, a sudden loud crash echoes through the house."
     
+    play sound "falling_stairs.flac" volume 1.0
+
     """
     {b}{size=+20}BANG!{/size}{/b}
     """
