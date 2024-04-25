@@ -664,6 +664,8 @@ label joe_lying:
 
 
 label team_olivia:
+    stop music
+    play music "./gui/music/SCP-x6x.mp3" loop
     blank "[povname] decides to befriend Olivia, and begins to hang out with her routinely."
     
     blank "They walk together at night around the neighborhood, and for a while, it seems that everything is fine."
@@ -693,6 +695,9 @@ label ask_about_joe:
 
     povname "Well, I’ve noticed he seems a bit off. Do you know anything about him?"
 
+    stop music
+    play music "./gui/music/darkstandoff.mp3" loop
+
     blank "A hint of anger appears in her eyes."
 
     o "I would be careful around him if I were you."
@@ -702,6 +707,9 @@ label ask_about_joe:
     blank "[povname] hesitates, but decides to press further."
 
     povname "I’ve heard some rumors… that he might have caused some trouble?"
+
+    stop music
+    play music "./gui/music/darkstandoff.mp3" loop
 
     blank "Suddenly, Olivia’s calm demeanor breaks, and with an uncharacteristic burst of emotion, she exclaims."
 
@@ -721,6 +729,9 @@ label ask_about_joe:
 
 
 label ask_about_house:
+    stop music
+    play music "./gui/music/distanttension.mp3" loop
+
     blank "Olivia sighs and settles down on the chair."
 
     o "The house has a long and unforgiving history."
@@ -743,6 +754,8 @@ label ask_about_house:
 
 
 label believe_olivia:
+    stop music
+    play music "./gui/music/SCP-x5x.mp3" loop
     blank "[povname] believes Olivia and thanks her for sharing the story."
 
     blank "After their talk, [povname] heads back home to finish setting up their new home."
@@ -765,6 +778,8 @@ label believe_olivia:
 
 
 label doubt_olivia:
+    stop music
+    play music "./gui/music/distanttension.mp3" loop
     blank "[povname] decides not to trust Olivia and gets up to confront her."
 
     blank "[povname] doubts Olivia because of her sudden outburst."
@@ -793,6 +808,8 @@ label doubt_olivia:
 
 
 label stay_olivia:
+    stop music
+    play music "./gui/music/awkwardtension.mp3" loop
     blank "[povname] is terrified by the idea of their house being haunted, possibly by ghosts."
 
     blank "Olivia eagerly offers to let [povname] live in her spare bedroom."
@@ -810,6 +827,9 @@ label stay_olivia:
     blank "[povname] enters the room, and notices that something is a bit off."
 
     blank "First, the door seemed awfully thick, and it was a struggle to even open it. The walls were gray and blank, and the window had bars over them."
+
+    stop music
+    play music "./gui/music/ghoststory.mp3" loop
 
     blank "Before [povname] even has time to process the situation, the door slams shut behind them and a click of the lock sounds."
 
@@ -856,6 +876,9 @@ label joe_help:
 
     blank "Joe leaves and comes back with an angle grinder and cuts through the window bars, letting [povname] out."
 
+    stop music
+    play music "./gui/music/darkwalk.mp3" loop
+
     j "Stay away from Olivia, and get back home ASAP!"
 
     blank "[povname] runs home and is frantically packing up all their belongings wanting to get far away from this town."
@@ -871,6 +894,9 @@ label joe_go_away:
     blank "Joe mutters under his breath that you’re making the wrong choice and shuffles away."
 
     blank "[povname] continues to pound on the door, screaming at Olivia to let them out. Hours pass, and Olivia finally responds."
+
+    stop music
+    play music "./gui/music/thedread.mp3" loop
 
     o "Heyyy [povname], I’m so sorry, but I had to do this. The truth is, your house isn’t really haunted."
 
@@ -890,6 +916,8 @@ label joe_go_away:
 
 
 label dresser: 
+    stop music
+    play music "./gui/music/leavinghome.mp3" loop
     blank "[povname] finds scraps of torn paper behind the dresser. Curious, [povname] attempts to arrange the pieces together to see what it says."
 
     povname "Hmm, interesting. It seems like someone wrote something and then tore it all up. I wonder what it says."
@@ -901,6 +929,8 @@ label dresser:
 
 
 label solved_puzzle:
+    stop music
+    play music "./gui/music/nightvigil.mp3" loop
     blank "Once the puzzle is solved, it reveals a confession note written by Olivia, revealing all the crimes she committed, including killing the cat, her boyfriend, and causing the house to seem haunted."
 
     blank "Player immediately calls 911, alerting the police who then arrest Olivia."
@@ -910,6 +940,9 @@ label solved_puzzle:
     return
 
 label not_solved_puzzle:
+    stop music 
+    play music "./gui/music/distanttension.mp3" loop
+
     blank "[povname] does not solve the puzzle in time, and Olivia walks in on the [povname] arranging the puzzle."
 
     o "Hey! What are you doing?"
