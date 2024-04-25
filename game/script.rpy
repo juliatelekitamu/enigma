@@ -790,6 +790,8 @@ label doubt_olivia:
 
     blank "[povname] suddenly feels a sharp pain on their abdomen."
 
+    play sound "stabbing_sound.mp3" volume 1.0
+
     blank "They look down and see a knife piercing through the skin."
 
     povname "I knew I shouldn’t have trusted you…"
@@ -822,11 +824,15 @@ label stay_olivia:
 
     blank "First, the door seemed awfully thick, and it was a struggle to even open it. The walls were gray and blank, and the window had bars over them."
 
+    play sound "lock_door.mp3" volume 1.0
+
     blank "Before [povname] even has time to process the situation, the door slams shut behind them and a click of the lock sounds."
 
     povname "Ha Olivia thats funny, you can let me out now."
 
     blank "..."
+
+    play sound "bang_door.mp3" volume 1.0
 
     povname "Hello? Let me out now!"
 
@@ -865,6 +871,8 @@ label not_dresser:
 label joe_help:
     povname "Help me, Joe! Olivia locked me in here, and I’m trapped."
 
+    play sound "power_tool.mp3" volume 1.0
+
     blank "Joe leaves and comes back with an angle grinder and cuts through the window bars, letting [povname] out."
 
     j "Stay away from Olivia, and get back home ASAP!"
@@ -880,6 +888,8 @@ label joe_go_away:
     povname "Go away, creepy man!"
 
     blank "Joe mutters under his breath that you’re making the wrong choice and shuffles away."
+
+    play sound "bang_door.mp3" volume 1.0
 
     blank "[povname] continues to pound on the door, screaming at Olivia to let them out. Hours pass, and Olivia finally responds."
 
@@ -914,6 +924,8 @@ label dresser:
 label solved_puzzle:
     blank "Once the puzzle is solved, it reveals a confession note written by Olivia, revealing all the crimes she committed, including killing the cat, her boyfriend, and causing the house to seem haunted."
 
+    play sound "phone_ring.mp3" volume 1.0
+
     blank "Player immediately calls 911, alerting the police who then arrest Olivia."
 
     blank "GOOD END ([povname] wins game)"
@@ -936,6 +948,8 @@ label not_solved_puzzle:
     o "This is your last warning…"
 
     povname "Olivia, stop it, you’re acting weird."
+
+    play sound "stabbing_sound.mp3" volume 1.0
 
     blank "Before [povname] can even think, [povname] suddenly feels a sharp pain on their abdomen."
 
