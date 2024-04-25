@@ -75,7 +75,7 @@ default finished_pieces = 0 # Keeps track of the amount of pieces that have been
 
 screen reassemble_puzzle:
     image "images/minigame/background.png"
-    add DynamicDisplayable(countdown, length=120.0)
+    add DynamicDisplayable(countdown, length=60.0)
     frame:
         background "images/minigame/puzzle-frame.png"
         xysize full_page_size
@@ -920,7 +920,7 @@ label not_solved_puzzle:
 
     o "I would suggest throwing them away, I’m sure it's nothing important! I’m sure your time is valuable and doubt you should be wasting your efforts on something like this…"
 
-    povname "Its ok, I have nothing better to do"
+    povname "It's ok, I have nothing better to do."
 
     o "This is your last warning…"
 
