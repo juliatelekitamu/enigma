@@ -457,6 +457,7 @@ label end_1:
 
 label team_joe:
     stop music
+    play music "./gui/music/SCP-x7x.mp3" loop
 
     blank "[povname] appreciates Olivia's note but does not pay much heed to it. [povname] recognizes that Joe is not your average neighbor. They soon realize that there are things that are strange about Joe but they still continue to trust him."
     
@@ -465,6 +466,8 @@ label team_joe:
     blank "[povname] decides to spend more time with Joe and continues to let him into his house to get it set up."
 
     scene bg room_cat
+    stop music
+    play music "./gui/music/darkwalk.mp3" loop
 
     blank "[povname] decided to keep the yellow eyed cat that appeared in the house when they moved in and named it Pepper, but they haven't shown Joe yet, since the cat hides anytime guests are over."
 
@@ -500,6 +503,9 @@ label nice_to_joe:
 
     hide joe
     show joe talking_smiling at double_size_midleft1
+
+    stop music
+    play music "./gui/music/SCP-x6x.mp3" loop
 
     j "Thanks for giving me the chance to show you who I really am, most people are scared of me when they hear all the dumb stuff people say about me."
 
@@ -545,6 +551,8 @@ label nice_to_joe:
             jump joe_lying
 
 label mean_to_joe:
+    stop music 
+    play music "./gui/music/darkwalk.mp3" loop
 
     show joe smile at double_size_midleft1
 
@@ -569,9 +577,12 @@ label mean_to_joe:
             jump feels_bad_joe
 
 label doesnt_feel_bad_joe:
-
+    stop music 
+    play music "./gui/music/darkstandoff.mp3" loop
 
 label feels_bad_joe:
+    stop music 
+    play music "./gui/music/SCP-x5x.mp3" loop
     scene bg house_joe
     blank "A few weeks go by, and [povname] feels like maybe they overreacted about Joe and their cat. Maybe [povname] should go apologize and hear his side of the story with Olivia."
 
@@ -655,12 +666,18 @@ label feels_bad_joe:
     return
 
 label believes_joe:
+    stop music
+    play music "./gui/music/SCP-x6x.mp3" loop
 
 
 label doesnt_know:
+    stop music
+    play music "./gui/music/awkwardmeeting.mp3" loop
 
 
 label joe_lying:
+    stop music 
+    play music "./gui/music/darkstandoff.mp3" loop
 
 
 label team_olivia:
@@ -809,7 +826,7 @@ label doubt_olivia:
 
 label stay_olivia:
     stop music
-    play music "./gui/music/awkwardtension.mp3" loop
+    play music "./gui/music/awkwardmeeting.mp3" loop
     blank "[povname] is terrified by the idea of their house being haunted, possibly by ghosts."
 
     blank "Olivia eagerly offers to let [povname] live in her spare bedroom."
