@@ -169,6 +169,13 @@ label start:
     transform midright:
         xalign 0.66 yalign 1.05
 
+    transform olivia_bigger:
+        xpos 1000 ypos 200 zoom 2
+
+    transform knife_position:
+        xpos 700 ypos 420
+
+
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
@@ -1065,7 +1072,7 @@ label not_solved_puzzle:
     povname "It's ok, I have nothing better to do."
 
     hide olivia 
-    show olivia evil_smile_3 at midright
+    show olivia evil_smile_3 at olivia_bigger
 
     o "This is your last warning…"
 
@@ -1073,15 +1080,10 @@ label not_solved_puzzle:
 
     play sound "stabbing_sound.mp3" volume 1.0
 
-    transform olivia_bigger:
-        zoom 2
-
-    transform knife_position:
-        yalign 0.5
-
+    
     hide olivia 
-    show olivia evil_smile_3 at olivia_bigger
-    show knife exists
+    show olivia frustrated at olivia_bigger
+    show knife exists at knife_position
 
     blank "Before [povname] can even think, [povname] suddenly feels a sharp pain on their abdomen."
 
