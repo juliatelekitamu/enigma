@@ -79,7 +79,7 @@ default finished_pieces = 0 # Keeps track of the amount of pieces that have been
 
 screen reassemble_puzzle:
     image "images/minigame/background.png"
-    add DynamicDisplayable(countdown, length=120.0)
+    add DynamicDisplayable(countdown, length=60.0)
     frame:
         background "images/minigame/puzzle-frame.png"
         xysize full_page_size
@@ -177,6 +177,8 @@ label start:
 
     blank "As the sun dipped below the horizon, casting long shadows over the eerie town of Whispering Hollow, a chill crept down [povname]'s back." 
     
+    play sound "wind_sounds.mp3" volume 0.3
+
     blank "They stood before what would be their new home, 657 Boulevard."
 
     blank "A new job awaits in this small forsaken town, and the only available residence was this haunted house."
@@ -184,6 +186,8 @@ label start:
     show ben talking_mouth_open at midleft with dissolve
  
     blank "Clutching their keys tightly, [povname] couldn't shake the feeling of unease that settled on their shoulders."
+
+    stop sound fadeout 2.0
 
     blank "As Ben and [povname] continued moving boxes into the house, Ben struck up a conversation to lighten the mood."
 
@@ -342,7 +346,11 @@ label ben_falls:
     show ben carrying_boxes at benwithboxes with dissolve
     blank "[povname] replies, trying to maintain a sense of normalcy despite the ominous atmosphere."
 
+    play sound "creaky_floorboard.flac" volume 1.0
+
     blank "Ben nods, hoisting the boxes onto his shoulders and carefully making his way up the creaking stairs."
+
+    play sound "creaky_floorboard.flac" volume 1.0
 
     blank "Each step seemed to groan beneath his weight, adding to the tension in the air."
 
@@ -370,11 +378,14 @@ label ben_falls:
 
     stop music
 
+    play sound "falling_stairs.flac" volume 1.0
+
     blank "Before [povname] can even begin to ponder at what that might mean, a deafening crash reverberates through the house, causing them and Joe to freeze in their tracks."
 
     """
     {b}{size=+20}BANG!{/size}{/b}
     """
+
     play music "./gui/music/nightvigil.mp3" loop    
     hide joe
     show joe startled at midright
@@ -393,6 +404,8 @@ label ben_falls:
 
     blank "Frantic, [povname] and Joe quickly assess the situation, their hands trembling as they check for signs of life. With adrenaline coursing through their veins, they realize the severity of the situation and waste no time in getting Ben to the hospital."
 
+    play sound "hospital_beep.mp3" volume 0.5
+
     blank "Hours pass in agonizing uncertainty as [povname] paces the sterile halls of the hospital, their mind consumed with worry for their friend."
     
     blank "Finally, the doctors emerge with grave expressions, delivering the devastating news — Ben is in a coma, his injuries severe and his prognosis uncertain."
@@ -404,6 +417,8 @@ label ben_falls:
     blank "The [povname] ventured deeper into the corridors, ready to retire for the night."
 
     blank "With a nervous hand, [povname] flicked on a light, revealing their bedroom shrouded in shadows."
+
+    play sound "cat_meow.mp3" volume 0.5
     
     blank "And there, nestled in the corner, a pair of glowing eyes stared back at them—a solitary cat, its fur bristling with unease, as they too were sensing that there was something more to the house."
 
@@ -435,8 +450,12 @@ label end_1:
     stop music
     play music "./gui/music/nightvigil.mp3" loop
 
+    play sound "creaky_floorboard.flac" volume 1.0
+
     blank "As [povname] starts to ascend the stairs, the weight of the boxes pressing down on them with each step, a sudden loud crash echoes through the house."
     
+    play sound "falling_stairs.flac" volume 1.0
+
     """
     {b}{size=+20}BANG!{/size}{/b}
     """
@@ -461,6 +480,7 @@ label end_1:
 
 label team_joe:
     stop music
+    play music "./gui/music/SCP-x7x.mp3" loop
 
     blank "[povname] appreciates Olivia's note but does not pay much heed to it. [povname] recognizes that Joe is not your average neighbor. They soon realize that there are things that are strange about Joe but they still continue to trust him."
     
@@ -469,6 +489,10 @@ label team_joe:
     blank "[povname] decides to spend more time with Joe and continues to let him into his house to get it set up."
 
     scene bg room_cat
+
+    play sound "cat_meow.mp3" volume 0.5
+    stop music
+    play music "./gui/music/darkwalk.mp3" loop
 
     blank "[povname] decided to keep the yellow eyed cat that appeared in the house when they moved in and named it Pepper, but they haven't shown Joe yet, since the cat hides anytime guests are over."
 
@@ -504,6 +528,9 @@ label nice_to_joe:
 
     hide joe
     show joe talking_smiling at double_size_midleft1
+
+    stop music
+    play music "./gui/music/SCP-x6x.mp3" loop
 
     j "Thanks for giving me the chance to show you who I really am, most people are scared of me when they hear all the dumb stuff people say about me."
 
@@ -549,6 +576,8 @@ label nice_to_joe:
             jump joe_lying
 
 label mean_to_joe:
+    stop music 
+    play music "./gui/music/darkwalk.mp3" loop
 
     show joe smile at double_size_midleft1
 
@@ -573,9 +602,12 @@ label mean_to_joe:
             jump feels_bad_joe
 
 label doesnt_feel_bad_joe:
-
+    stop music 
+    play music "./gui/music/darkstandoff.mp3" loop
 
 label feels_bad_joe:
+    stop music 
+    play music "./gui/music/SCP-x5x.mp3" loop
     scene bg house_joe
     blank "A few weeks go by, and [povname] feels like maybe they overreacted about Joe and their cat. Maybe [povname] should go apologize and hear his side of the story with Olivia."
 
@@ -659,15 +691,23 @@ label feels_bad_joe:
     return
 
 label believes_joe:
+    stop music
+    play music "./gui/music/SCP-x6x.mp3" loop
 
 
 label doesnt_know:
+    stop music
+    play music "./gui/music/awkwardmeeting.mp3" loop
 
 
 label joe_lying:
+    stop music 
+    play music "./gui/music/darkstandoff.mp3" loop
 
 
 label team_olivia:
+    stop music
+    play music "./gui/music/SCP-x6x.mp3" loop
     blank "[povname] decides to befriend Olivia, and begins to hang out with her routinely."
     
     show olivia smiling_talking at midleft
@@ -713,6 +753,9 @@ label ask_about_joe:
     hide olivia
     show olivia frown at midleft
 
+    stop music
+    play music "./gui/music/darkstandoff.mp3" loop
+
     blank "A hint of anger appears in her eyes."
 
     hide olivia
@@ -728,6 +771,9 @@ label ask_about_joe:
 
     hide olivia
     show olivia losing_her_mind at midleft
+
+    stop music
+    play music "./gui/music/darkstandoff.mp3" loop
 
     blank "Suddenly, Olivia’s calm demeanor breaks, and with an uncharacteristic burst of emotion, she exclaims."
 
@@ -752,6 +798,9 @@ label ask_about_joe:
 
 label ask_about_house:
     show olivia smiling_talking at midleft with dissolve
+
+    stop music
+    play music "./gui/music/distanttension.mp3" loop
 
     blank "Olivia sighs and settles down on the chair."
 
@@ -779,6 +828,8 @@ label ask_about_house:
 
 label believe_olivia:
     show olivia about_to_cry at midleft with dissolve
+    stop music
+    play music "./gui/music/SCP-x5x.mp3" loop
     blank "[povname] believes Olivia and thanks her for sharing the story."
 
     hide olivia
@@ -806,6 +857,8 @@ label believe_olivia:
 
 
 label doubt_olivia:
+    stop music
+    play music "./gui/music/distanttension.mp3" loop
     blank "[povname] decides not to trust Olivia and gets up to confront her."
 
     blank "[povname] doubts Olivia because of her sudden outburst."
@@ -819,6 +872,8 @@ label doubt_olivia:
     povname "Well, I would like to get to hear both sides of the story and ask Joe…"
 
     blank "[povname] suddenly feels a sharp pain on their abdomen."
+
+    play sound "stabbing_sound.mp3" volume 1.0
 
     blank "They look down and see a knife piercing through the skin."
 
@@ -834,6 +889,8 @@ label doubt_olivia:
 
 
 label stay_olivia:
+    stop music
+    play music "./gui/music/awkwardmeeting.mp3" loop
     blank "[povname] is terrified by the idea of their house being haunted, possibly by ghosts."
 
     blank "Olivia eagerly offers to let [povname] live in her spare bedroom."
@@ -852,11 +909,18 @@ label stay_olivia:
 
     blank "First, the door seemed awfully thick, and it was a struggle to even open it. The walls were gray and blank, and the window had bars over them."
 
+    play sound "lock_door.mp3" volume 1.0
+
+    stop music
+    play music "./gui/music/ghoststory.mp3" loop
+
     blank "Before [povname] even has time to process the situation, the door slams shut behind them and a click of the lock sounds."
 
     povname "Ha Olivia thats funny, you can let me out now."
 
     blank "..."
+
+    play sound "bang_door.mp3" volume 1.0
 
     povname "Hello? Let me out now!"
 
@@ -895,7 +959,12 @@ label not_dresser:
 label joe_help:
     povname "Help me, Joe! Olivia locked me in here, and I’m trapped."
 
+    play sound "power_tool.mp3" volume 1.0
+
     blank "Joe leaves and comes back with an angle grinder and cuts through the window bars, letting [povname] out."
+
+    stop music
+    play music "./gui/music/darkwalk.mp3" loop
 
     j "Stay away from Olivia, and get back home ASAP!"
 
@@ -911,7 +980,12 @@ label joe_go_away:
 
     blank "Joe mutters under his breath that you’re making the wrong choice and shuffles away."
 
+    play sound "bang_door.mp3" volume 1.0
+
     blank "[povname] continues to pound on the door, screaming at Olivia to let them out. Hours pass, and Olivia finally responds."
+
+    stop music
+    play music "./gui/music/thedread.mp3" loop
 
     o "Heyyy [povname], I’m so sorry, but I had to do this. The truth is, your house isn’t really haunted."
 
@@ -931,6 +1005,8 @@ label joe_go_away:
 
 
 label dresser: 
+    stop music
+    play music "./gui/music/leavinghome.mp3" loop
     blank "[povname] finds scraps of torn paper behind the dresser. Curious, [povname] attempts to arrange the pieces together to see what it says."
 
     povname "Hmm, interesting. It seems like someone wrote something and then tore it all up. I wonder what it says."
@@ -942,7 +1018,11 @@ label dresser:
 
 
 label solved_puzzle:
+    stop music
+    play music "./gui/music/nightvigil.mp3" loop
     blank "Once the puzzle is solved, it reveals a confession note written by Olivia, revealing all the crimes she committed, including killing the cat, her boyfriend, and causing the house to seem haunted."
+
+    play sound "phone_ring.mp3" volume 1.0
 
     blank "Player immediately calls 911, alerting the police who then arrest Olivia."
 
@@ -951,6 +1031,9 @@ label solved_puzzle:
     return
 
 label not_solved_puzzle:
+    stop music 
+    play music "./gui/music/distanttension.mp3" loop
+
     show olivia concerned_1 at midright with dissolve
     blank "[povname] does not solve the puzzle in time, and Olivia walks in on the [povname] arranging the puzzle."
     
@@ -968,7 +1051,7 @@ label not_solved_puzzle:
 
     o "I would suggest throwing them away, I’m sure it's nothing important! I’m sure your time is valuable and doubt you should be wasting your efforts on something like this…"
 
-    povname "Its ok, I have nothing better to do"
+    povname "It's ok, I have nothing better to do."
 
     hide olivia 
     show olivia evil_smile_3 at midright
@@ -976,6 +1059,8 @@ label not_solved_puzzle:
     o "This is your last warning…"
 
     povname "Olivia, stop it, you’re acting weird."
+
+    play sound "stabbing_sound.mp3" volume 1.0
 
     transform olivia_bigger:
         zoom 2
