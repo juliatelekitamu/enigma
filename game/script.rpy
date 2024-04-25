@@ -410,6 +410,8 @@ label ben_falls:
     blank "They find the boxes scattered at the bottom of the stairs, and to their horror, Ben lying unconscious beside them."
 
     blank "Frantic, [povname] and Joe quickly assess the situation, their hands trembling as they check for signs of life. With adrenaline coursing through their veins, they realize the severity of the situation and waste no time in getting Ben to the hospital."
+    
+    scene black with dissolve
 
     play sound "hospital_beep.mp3" volume 0.5
 
@@ -422,6 +424,8 @@ label ben_falls:
     blank "As [povname] returns to their house with the knowledge of their friend stuck in a coma, the air was filled with a suffocating sense of foreboding."
     
     blank "The [povname] ventured deeper into the corridors, ready to retire for the night."
+
+    scene bg bedroom
 
     blank "With a nervous hand, [povname] flicked on a light, revealing their bedroom shrouded in shadows."
 
@@ -1036,6 +1040,7 @@ label dresser:
 
 
 label solved_puzzle:
+    scene bg bedroom
     stop music
     play music "./gui/music/nightvigil.mp3" loop
     blank "Once the puzzle is solved, it reveals a confession note written by Olivia, revealing all the crimes she committed, including killing the cat, her boyfriend, and causing the house to seem haunted."
