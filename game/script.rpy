@@ -710,6 +710,7 @@ label team_olivia:
     play music "./gui/music/SCP-x6x.mp3" loop
     blank "[povname] decides to befriend Olivia, and begins to hang out with her routinely."
     
+    scene bg village_outskirts_sunset
     show olivia smiling_talking at midleft
 
     blank "They walk together at night around the neighborhood, and for a while, it seems that everything is fine."
@@ -802,6 +803,8 @@ label ask_about_house:
     stop music
     play music "./gui/music/distanttension.mp3" loop
 
+    scene bg mansion_entryway
+
     blank "Olivia sighs and settles down on the chair."
 
     hide olivia
@@ -838,6 +841,8 @@ label believe_olivia:
     blank "After their talk, [povname] heads back home to finish setting up their new home."
 
     hide olivia with dissolve
+
+    scene bg bedroom
 
     blank "[povname] is cleaning their home and notices an antique dresser at the corner of the room."
 
@@ -900,10 +905,14 @@ label stay_olivia:
     povname "Great, thanks so much! I’ll start packing my bags…"
 
     blank "On a chilly Thursday evening, [povname] is moving her boxes one by one into the house."
+
+    scene bg mansion_dining_room
     
     blank "Olivia then points to an empty room, directing them to check out the space."
 
     o "Hey the room is right over here, wanna check it out real quick? There’s no bedbugs I promise :)"
+
+    scene bg attic_bedroom
 
     blank "[povname] enters the room, and notices that something is a bit off."
 
@@ -967,6 +976,8 @@ label joe_help:
     play music "./gui/music/darkwalk.mp3" loop
 
     j "Stay away from Olivia, and get back home ASAP!"
+
+    scene bg bedroom
 
     blank "[povname] runs home and is frantically packing up all their belongings wanting to get far away from this town."
     
